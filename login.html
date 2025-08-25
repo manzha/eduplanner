@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <title>Login - Edu Planner</title>
+    <link rel="canonical" href="https://eduplanner.ajamba.org/login/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Login - Edu Planner" />
+    <meta property="og:site_name" content="Edu Planner" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      id="wpo_min-header-0-css"
+      href="css/login.css"
+      media="all"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+  </head>
+  <body>
+    <!-- Fondo SVG opcional, si quieres usarlo -->
+    <div class="absolute inset-0 -z-10 w-full h-full">
+    <svg class="w-full h-full" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_f_307_232)">
+        <ellipse cx="1189.5" cy="896" rx="416.5" ry="403" fill="#8BCAD1"/>
+        </g>
+        <g filter="url(#filter1_f_307_232)">
+        <ellipse cx="362" cy="204.5" rx="444" ry="429.5" fill="#BAAED6"/>
+        </g>
+        <g filter="url(#filter2_f_307_232)">
+        <ellipse cx="329" cy="922.5" rx="444" ry="429.5" fill="#FEE1B7"/>
+        </g>
+        <g filter="url(#filter3_f_307_232)">
+        <ellipse cx="1106" cy="171" rx="453" ry="438" fill="#F7CADD"/>
+        </g>
+        <g filter="url(#filter4_n_307_232)">
+        <rect width="1440" height="1024" fill="white" fill-opacity="0.2"/>
+        </g>
+        <defs>
+        <filter id="filter0_f_307_232" x="573" y="293" width="1233" height="1206" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_307_232"/>
+        </filter>
+        <filter id="filter1_f_307_232" x="-282" y="-425" width="1288" height="1259" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_307_232"/>
+        </filter>
+        <filter id="filter2_f_307_232" x="-315" y="293" width="1288" height="1259" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_307_232"/>
+        </filter>
+        <filter id="filter3_f_307_232" x="453" y="-467" width="1306" height="1276" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_307_232"/>
+        </filter>
+        <filter id="filter4_n_307_232" x="0" y="0" width="1440" height="1024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        
+        
+        <feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+        <feComponentTransfer in="noise1Clipped" result="color1">
+        <feFuncA type="table" tableValues="0 0.24" />
+        </feComponentTransfer>
+        <feMerge result="effect1_noise_307_232">
+        <feMergeNode in="shape" />
+        <feMergeNode in="color1" />
+        </feMerge>
+        </filter>
+        </defs>
+        </svg>
+        
+  </div>
+    <div
+      class="flex flex-col lg:flex-row  min-h-screen"
+    >
+      <div
+        class="w-full lg:w-1/2 flex items-center justify-center p-10"
+      >
+        <a href="#">
+          <img
+            decoding="async"
+            src="img/logo.png"
+            title="logo-form"
+            alt="logo-form"
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div
+        class="w-full lg:w-1/2 flex items-center justify-center rounded-t-3xl lg:rounded-t-none lg:rounded-l-none lg:rounded-r-3xl p-8 lg:p-16"
+      >
+        <div class="">
+          <div class="eduplanner-login-container">
+            <!-- Formulario de Login (existente, sin cambios) -->
+            <div class="eduplanner-login-form">
+              <h2 class="eduplanner-welcome-title">¡Bienvenido!</h2>
+              <p class="eduplanner-welcome-subtitle">
+                Inicia sesión para acceder a tu cuenta y explorar infinitas
+                posibilidades
+              </p>
+
+              <img
+                decoding="async"
+                src="img/Frame-5.png"
+                alt="EduPlanner Character"
+                class="eduplanner-character-icon"
+              />
+
+              <form method="post" action="">
+                <div class="eduplanner-form-group">
+                  <label for="eduplanner_email" class="eduplanner-form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="eduplanner_email"
+                    name="eduplanner_email"
+                    class="eduplanner-form-input"
+                    required
+                  />
+                </div>
+
+                <div class="eduplanner-form-group">
+                  <label for="eduplanner_password" class="eduplanner-form-label"
+                    >Contraseña</label
+                  >
+                  <div class="eduplanner-password-container">
+                    <input
+                      type="password"
+                      id="eduplanner_password"
+                      name="eduplanner_password"
+                      class="eduplanner-form-input eduplanner-password-input"
+                      required
+                    /><button
+                        type="button"
+                        class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500 toggle-password"
+                        data-target="eduplanner_password"
+                    >
+                        <!-- Ojo cerrado (oculto) -->
+                        <i class="fa-solid fa-eye icon-eye-open hidden"></i>
+                        <!-- Ojo abierto (visible) -->
+                        <i class="fa-solid fa-eye-slash icon-eye-closed"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="eduplanner-forgot-password">
+                  <a href="reset.html" class="eduplanner-forgot-link">
+                    Olvidé mi contraseña
+                  </a>
+                </div>
+
+                <button
+                  type="submit"
+                  name="eduplanner_login_submit"
+                  class="eduplanner-login-button"
+                >
+                  Iniciar sesión
+                </button>
+              </form>
+
+              <div class="eduplanner-register-section">
+                <p class="eduplanner-register-text titulo">
+                  ¿Todavía no tienes una cuenta?
+                </p>
+
+                <p class="eduplanner-register-text">
+                  Regístrate para comenzar a usar EduPlanner
+                </p>
+                <a href="signup.html" class="eduplanner-register-button"> Registrarse </a>
+              </div>
+            </div>
+
+            <!-- Formulario de registro (existente, sin cambios) -->
+            <div class="eduplanner-register-form" style="display: none">
+              <h2 class="eduplanner-welcome-title">Abre tu cuenta</h2>
+              <p class="eduplanner-welcome-subtitle">
+                ¿Ya tienes una cuenta?
+                <a href="#" class="eduplanner-login-to-register"
+                  >Haz click aquí</a
+                >
+              </p>
+
+              <form method="post" action="">
+                <div class="eduplanner-form-group">
+                  <label for="eduplanner_fullname" class="eduplanner-form-label"
+                    >Nombres completos</label
+                  >
+                  <input
+                    type="text"
+                    id="eduplanner_fullname"
+                    name="eduplanner_fullname"
+                    class="eduplanner-form-input"
+                    placeholder="Gimena Robón"
+                    required
+                  />
+                </div>
+
+                <div class="eduplanner-form-group">
+                  <label
+                    for="eduplanner_register_email"
+                    class="eduplanner-form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="eduplanner_register_email"
+                    name="eduplanner_register_email"
+                    class="eduplanner-form-input"
+                    placeholder="gimena@gmail.com"
+                    required
+                  />
+                </div>
+
+                <div class="eduplanner-form-group">
+                  <label
+                    for="eduplanner_register_password"
+                    class="eduplanner-form-label"
+                    >Contraseña</label
+                  >
+                  <div class="eduplanner-password-container">
+                    <input
+                      type="password"
+                      id="eduplanner_register_password"
+                      name="eduplanner_register_password"
+                      class="eduplanner-form-input eduplanner-password-input"
+                      placeholder="contraseña"
+                      required
+                    />
+                    <button
+                      type="button"
+                      class="eduplanner-toggle-password"
+                      title="Mostrar contraseña"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                        ></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="eduplanner-form-group">
+                  <label
+                    for="eduplanner_birthdate"
+                    class="eduplanner-form-label"
+                    >Fecha de nacimiento</label
+                  >
+                  <input
+                    type="date"
+                    id="eduplanner_birthdate"
+                    name="eduplanner_birthdate"
+                    class="eduplanner-form-input"
+                    placeholder="29/12/04"
+                    required
+                  />
+                </div>
+
+                <div class="eduplanner-form-group">
+                  <label for="eduplanner_phone" class="eduplanner-form-label"
+                    >Número telefónico</label
+                  >
+                  <input
+                    type="tel"
+                    id="eduplanner_phone"
+                    name="eduplanner_phone"
+                    class="eduplanner-form-input"
+                    placeholder="85634567"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  name="eduplanner_register_submit"
+                  class="eduplanner-login-button"
+                >
+                  Registrarse
+                </button>
+              </form>
+            </div>
+
+            <!-- Nuevo formulario de recuperar contraseña -->
+            <div class="eduplanner-forgot-password-form" style="display: none">
+              <h2 class="eduplanner-welcome-title">Recupera tu contraseña</h2>
+              <p class="eduplanner-welcome-subtitle">
+                Escribe el correo electrónico asociado a tu cuenta y enviaremos
+                información para recuperar tu contraseña.
+              </p>
+
+              <img
+                decoding="async"
+                src="img/Frame-5.png"
+                alt="EduPlanner Character"
+                class="eduplanner-character-icon"
+              />
+
+              <form method="post" action="">
+                <div class="eduplanner-form-group">
+                  <label
+                    for="eduplanner_forgot_email"
+                    class="eduplanner-form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="eduplanner_forgot_email"
+                    name="eduplanner_forgot_email"
+                    class="eduplanner-form-input"
+                    placeholder="gummie@gmail.com"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  name="eduplanner_forgot_submit"
+                  class="eduplanner-login-button"
+                >
+                  Recuperar
+                </button>
+
+                <div class="eduplanner-register-section">
+                  <a
+                    href="javascript:void(0)"
+                    class="eduplanner-register-button eduplanner-back-to-login"
+                  >
+                    Regresar
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggleButtons = document.querySelectorAll(".toggle-password");
+      
+          toggleButtons.forEach(button => {
+            button.addEventListener("click", () => {
+              const targetId = button.getAttribute("data-target");
+              const input = document.getElementById(targetId);
+      
+              if (!input) return;
+      
+              const eyeClosed = button.querySelector(".icon-eye-closed");
+              const eyeOpen = button.querySelector(".icon-eye-open");
+      
+              if (input.type === "password") {
+                input.type = "text";
+                eyeClosed.classList.add("hidden");
+                eyeOpen.classList.remove("hidden");
+              } else {
+                input.type = "password";
+                eyeClosed.classList.remove("hidden");
+                eyeOpen.classList.add("hidden");
+              }
+            });
+          });
+        });
+      </script>
+  </body>
+</html>
+<!-- Cached by WP-Optimize (gzip) - https://teamupdraft.com/wp-optimize/ - Last modified: August 15, 2025 7:14 pm (America/Mexico_City UTC:-6) -->

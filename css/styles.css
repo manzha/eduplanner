@@ -1,0 +1,91 @@
+/* .footer {
+  padding: 3rem 1rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.footer h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #e8649b;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #b34c7d;
+}
+
+
+#precios {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.tabla-precio {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tabla-precio.destacado {
+  background-color: #e0ffe0;
+  border-color: #2ecc71;
+}
+
+.tabla-precio h3 {
+  margin-top: 0;
+}
+
+.tabla-precio ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabla-precio ul li::before {
+  content: "✔️ ";
+  color: green;
+} */
+
+/* CUSTOM */
+.bg-purple-9A89C3 {
+    background: var(--Morado, #9A89C3);
+}
+
+body {
+    font-family: Onest;
+}
+
+#beneficios, #testimonios, #precios {
+    scroll-margin-top: 180px; /* Ajusta según el tamaño de tu header o margen que quieres */
+  }
