@@ -77,15 +77,138 @@
   color: green;
 } */
 
+.eduplanner-password-container {
+  position: relative;
+}
+
+.eduplanner-password-input {
+  padding-right: 50px;
+}
+
+.eduplanner-toggle-password {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #9AB5EF;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.eduplanner-toggle-password:hover, 
+button.eduplanner-toggle-password:focus{
+  color: #9AB5EF;
+  background: transparent;
+}
+
 /* CUSTOM */
 .bg-purple-9A89C3 {
     background: var(--Morado, #9A89C3);
 }
 
+.bg-pale-purple {
+  background: #E6E6E6 !important;
+}
+
+.bg-light-purple {
+  background-color: #D9D1DE;
+}
+
+.bg-dark-purple {
+  background-color: #7B64B1;
+}
+
+.bg-pale-yellow {
+  background-color: #F8F4E6;
+}
+
+.bg-blue {
+  background-color: #7FA1EB;
+}
+
+.text-blue {
+  color: #7FA1EB;
+}
+
+.text-dark-blue {
+  color: #5280E4;
+}
+
+.text-dark-purple {
+  color: #7B64B1;
+}
+
+.text-pale-purple {
+  color: #BAAED6;
+}
+
+.border-pale-purple {
+  border-color: #BAAED6;
+}
 body {
     font-family: Onest;
 }
 
 #beneficios, #testimonios, #precios {
     scroll-margin-top: 180px; /* Ajusta según el tamaño de tu header o margen que quieres */
+  }
+
+  /* Calendar */
+
+  .calendar {
+
+  }
+  .calendar-header {
+    
+  }
+  .calendar-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .calendar-weekdays, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .calendar-weekdays div, .calendar-dates div {
+    text-align: center;
+    padding: 10px;
+  }
+  .calendar-weekdays {
+    /* background-color: #eaeef3; */
+  }
+  .calendar-weekdays div {
+    /* font-weight: bold; */
+  }
+  .calendar-dates > div {
+    /* border-bottom: 1px solid #eaeef3; */
+    cursor: pointer;
+    background-color: #F8F4E6;
+    margin: 3px;
+  }
+  .calendar-dates div:hover {
+    background-color: #f1f1f1;
+  }
+  .current-date {
+    background-color: #f1f1f1 !important;
+    color: #000;
+  }
+
+  .circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+
+  .progress-ring__circle {
+    transition: stroke-dashoffset 1s linear;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
   }

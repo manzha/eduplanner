@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduPlanner Landing</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -32,26 +33,26 @@
         </defs>
       </symbol>
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-        <symbol id="wave-shape" viewBox="0 0 1440 125" preserveAspectRatio="none">
-          <path
-            d="M1440 83.9034C1383.26 83.9034 1378.01 124.95 1320.02 124.95C1261.98 124.95 1258.18 83.9034 1200.04 83.9034C1141.9 83.9034 1138.9 124.95 1080.06 124.95C1021.22 124.95 1017.88 83.9034 960.083 83.9034C902.291 83.9034 896.847 124.95 840.104 124.95C783.361 124.95 778.117 83.9034 720.125 83.9034C663.382 83.9034 658.137 124.95 600.146 124.95C542.104 124.95 538.308 83.9034 480.167 83.9034C422.025 83.9034 419.028 124.95 360.187 124.95C301.347 124.95 298 83.9034 240.208 83.9034C182.416 83.9034 176.972 124.95 120.229 124.95C63.4861 124.95 58.0416 83.9034 0 83.9034V0H1440V83.9034Z"
-            fill="currentColor"
-          />
-        </symbol>
-      </svg>
-      
-      <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
-        <symbol id="star-contour" viewBox="0 0 50 48" fill="none">
-          <path
-            d="M24.4 4C24.9 4 25.4 4.2 25.6 4.7L28.1 9.8L33.7 10.6C34.8 10.8 35.2 12.1 34.4 12.9L30.4 16.8L31.4 22.4C31.5 23.3 30.9 24 30.1 24C29.9 24 29.7 24 29.5 23.8L24.5 21.2L19.5 23.8C19.2 23.9 19 24 18.8 24C18 24 17.3 23.3 17.5 22.4L18.5 16.8L14.5 12.9C13.7 12.1 14.1 10.8 15.2 10.6L20.8 9.8L23.3 4.7C23.5 4.2 23.9 4 24.4 4Z"
-            stroke="currentColor"
-            stroke-width="2"
-            fill="none"
-          />
-        </symbol>
-      </svg>
-      
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="wave-shape" viewBox="0 0 1440 125" preserveAspectRatio="none">
+        <path
+          d="M1440 83.9034C1383.26 83.9034 1378.01 124.95 1320.02 124.95C1261.98 124.95 1258.18 83.9034 1200.04 83.9034C1141.9 83.9034 1138.9 124.95 1080.06 124.95C1021.22 124.95 1017.88 83.9034 960.083 83.9034C902.291 83.9034 896.847 124.95 840.104 124.95C783.361 124.95 778.117 83.9034 720.125 83.9034C663.382 83.9034 658.137 124.95 600.146 124.95C542.104 124.95 538.308 83.9034 480.167 83.9034C422.025 83.9034 419.028 124.95 360.187 124.95C301.347 124.95 298 83.9034 240.208 83.9034C182.416 83.9034 176.972 124.95 120.229 124.95C63.4861 124.95 58.0416 83.9034 0 83.9034V0H1440V83.9034Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="star-contour" viewBox="0 0 50 48" fill="none">
+        <path
+          d="M24.4 4C24.9 4 25.4 4.2 25.6 4.7L28.1 9.8L33.7 10.6C34.8 10.8 35.2 12.1 34.4 12.9L30.4 16.8L31.4 22.4C31.5 23.3 30.9 24 30.1 24C29.9 24 29.7 24 29.5 23.8L24.5 21.2L19.5 23.8C19.2 23.9 19 24 18.8 24C18 24 17.3 23.3 17.5 22.4L18.5 16.8L14.5 12.9C13.7 12.1 14.1 10.8 15.2 10.6L20.8 9.8L23.3 4.7C23.5 4.2 23.9 4 24.4 4Z"
+          stroke="currentColor"
+          stroke-width="2"
+          fill="none"
+        />
+      </symbol>
+    </svg>
+
     <!-- Navbar -->
     <header class="w-full bg-[#FDFCF9] shadow-sm fixed top-0 left-0 z-50">
       <div
@@ -59,13 +60,13 @@
       >
         <!-- Logo alineado a la izquierda -->
         <div class="flex items-center gap-2">
-            <a href="#hero">
-          <img
-            src="img/edu-planner-logo.png"
-            alt="EduPlanner logo"
-            class="h-12"
-          />
-        </a>
+          <a href="#hero">
+            <img
+              src="img/edu-planner-logo.png"
+              alt="EduPlanner logo"
+              class="h-12"
+            />
+          </a>
         </div>
 
         <!-- Menú + Botón agrupados a la derecha -->
@@ -141,18 +142,184 @@
           />
         </div>
       </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-24 mt-20"
+      >
+        <!-- Componente genérico del círculo -->
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient
+                id="gradient-days"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+                gradientTransform="rotate(90)"
+              >
+                <stop offset="0%" stop-color="#7B64B1" />
+                <stop offset="100%" stop-color="#BAAED6" />
+              </linearGradient>
+            </defs>
+
+            <!-- Fondo gris -->
+            <circle
+              stroke="#E5E7EB"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+
+            <!-- Progreso con gradiente -->
+            <circle
+              id="days-circle"
+              class="progress-ring__circle circle"
+              stroke="url(#gradient-days)"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+              stroke-dasharray="251.2"
+              stroke-dashoffset="251.2"
+            />
+          </svg>
+          <div class="text-2xl font-bold mt-2" id="days">00</div>
+          <div class="text-sm uppercase tracking-wide">Días</div>
+        </div>
+
+        <!-- HORAS -->
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient
+                id="gradient-hours"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+                gradientTransform="rotate(90)"
+              >
+                <stop offset="0%" stop-color="#7B64B1" />
+                <stop offset="100%" stop-color="#BAAED6" />
+              </linearGradient>
+            </defs>
+            <circle
+              stroke="#E5E7EB"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+            <circle
+              id="hours-circle"
+              class="progress-ring__circle circle"
+              stroke="url(#gradient-hours)"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+          </svg>
+          <div class="text-2xl font-bold mt-2" id="hours">00</div>
+          <div class="text-sm uppercase tracking-wide">Horas</div>
+        </div>
+
+        <!-- MINUTOS -->
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient
+                id="gradient-minutes"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+                gradientTransform="rotate(90)"
+              >
+                <stop offset="0%" stop-color="#7B64B1" />
+                <stop offset="100%" stop-color="#BAAED6" />
+              </linearGradient>
+            </defs>
+            <circle
+              stroke="#E5E7EB"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+            <circle
+              id="minutes-circle"
+              class="progress-ring__circle circle"
+              stroke="url(#gradient-minutes)"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+          </svg>
+          <div class="text-2xl font-bold mt-2" id="minutes">00</div>
+          <div class="text-sm uppercase tracking-wide">Minutos</div>
+        </div>
+
+        <!-- SEGUNDOS -->
+        <div class="flex flex-col items-center">
+          <svg class="w-24 h-24" viewBox="0 0 100 100">
+            <defs>
+              <linearGradient
+                id="gradient-seconds"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+                gradientTransform="rotate(90)"
+              >
+                <stop offset="0%" stop-color="#7B64B1" />
+                <stop offset="100%" stop-color="#BAAED6" />
+              </linearGradient>
+            </defs>
+            <circle
+              stroke="#E5E7EB"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+            <circle
+              id="seconds-circle"
+              class="progress-ring__circle circle"
+              stroke="url(#gradient-seconds)"
+              stroke-width="8"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+            />
+          </svg>
+          <div class="text-2xl font-bold mt-2" id="seconds">00</div>
+          <div class="text-sm uppercase tracking-wide">Segundos</div>
+        </div>
+      </div>
     </section>
     <div class="leading-none overflow-hidden -mt-1 text-[#CCDAF7]">
-        <svg
-          class="w-full h-36"
-          viewBox="0 0 1440 125"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-        >
-          <use href="#wave-shape" />
-        </svg>
-      </div>
+      <svg
+        class="w-full h-36"
+        viewBox="0 0 1440 125"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+      >
+        <use href="#wave-shape" />
+      </svg>
+    </div>
 
     <!-- Beneficios -->
     <section id="beneficios" class="relative bg-white pt-20 min-h-screen">
@@ -902,9 +1069,12 @@
               $350 <span class="text-base font-normal">/mes</span>
             </div>
             <a
-            href="#registro"
-            class="inline-block mt-4 text-white font-medium py-2 px-6 transition hover:brightness-90"
-            style="border-radius: 60px; background: var(--morado-pale, #BAAED6);"
+              href="#registro"
+              class="inline-block mt-4 text-white font-medium py-2 px-6 transition hover:brightness-90"
+              style="
+                border-radius: 60px;
+                background: var(--morado-pale, #baaed6);
+              "
             >
               Comienza ahora
             </a>
@@ -980,7 +1150,9 @@
                 Acceso a webinars y talleres exclusivos
               </li>
             </ul>
-            <div class="text-[#9A89C3] font-bold text-3xl mt-auto">Próximamente</div>
+            <div class="text-[#9A89C3] font-bold text-3xl mt-auto">
+              Próximamente
+            </div>
           </div>
 
           <!-- Plan Institucional -->
@@ -1065,25 +1237,26 @@
                 equipo docente del plan
               </li>
             </ul>
-            <div class="text-[#5280E4] font-bold text-3xl mt-auto">Próximamente</div>
+            <div class="text-[#5280E4] font-bold text-3xl mt-auto">
+              Próximamente
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-
     <!-- Testimonios -->
     <div class="leading-none overflow-hidden -mt-1 text-[#E1DCED] rotate-180">
-        <svg
-          class="w-full h-36"
-          viewBox="0 0 1440 125"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-        >
-          <use href="#wave-shape" />
-        </svg>
-      </div>
+      <svg
+        class="w-full h-36"
+        viewBox="0 0 1440 125"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+      >
+        <use href="#wave-shape" />
+      </svg>
+    </div>
     <section id="testimonios" class="bg-[#E1DCED] py-16 px-4">
       <h2 class="text-5xl font-bold text-center text-[#7B64B1] mb-12">
         Testimonios
@@ -1105,7 +1278,7 @@
         >
           <!-- Testimonio 1 -->
           <div
-            class="lg:min-w-[calc(100%/3)]  sm:w-full bg-white p-6 rounded-xl shadow text-center border border-purple-200"
+            class="lg:min-w-[calc(100%/3)] sm:w-full bg-white p-6 rounded-xl shadow text-center border border-purple-200"
           >
             <img
               class="w-24 h-24 mx-auto rounded-xl mb-4"
@@ -1120,7 +1293,7 @@
               con EduPlanner puedo visualizar todo el semestre en minutos.
               ¡Increíblemente útil!"
             </p>
-             
+
             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                 <path d="M12.4 2C12.9 2 13.4 2.2 13.6 2.7L16.1 7.8L21.7 8.6C22.8 8.8 23.2 10.1 22.4 10.9L18.4 14.8L19.4 20.4C19.5 21.3 18.9 22 18.1 22C17.9 22 17.7 22 17.5 21.8L12.5 19.2L7.49996 21.8C7.19996 21.9 6.99996 22 6.79996 22C5.99996 22 5.29996 21.3 5.49996 20.4L6.49996 14.8L2.49996 10.9C1.69996 10.1 2.09996 8.8 3.19996 8.6L8.79996 7.8L11.3 2.7C11.5 2.2 11.9 2 12.4 2ZM12.4 0C11.1 0 9.99996 0.7 9.39996 1.9L7.39996 6L2.89996 6.6C1.59996 6.8 0.599958 7.7 0.199958 8.9C-0.200042 10.1 0.0999585 11.4 0.999958 12.3L4.29996 15.5L3.49996 20C3.29996 21 3.59996 22 4.19996 22.7C4.89996 23.5 5.79996 24 6.79996 24C7.29996 24 7.89996 23.9 8.39996 23.6L12.5 21.5L16.6 23.6C17.1 23.9 17.6 24 18.2 24C19.2 24 20.1 23.6 20.8 22.8C21.4 22 21.7 21.1 21.5 20.1L20.7 15.6L24 12.4C24.9 11.5 25.2 10.2 24.8 9C24.4 7.8 23.3 6.8 22 6.6L17.4 6L15.4 1.9C14.8 0.7 13.7 0 12.4 0Z" fill="#7B64B1"/>
               </svg>
@@ -1222,16 +1395,16 @@
       </div>
     </section>
     <div class="leading-none overflow-hidden -mt-1 text-[#E1DCED]">
-        <svg
-          class="w-full h-36"
-          viewBox="0 0 1440 125"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-        >
-          <use href="#wave-shape" />
-        </svg>
-      </div>
+      <svg
+        class="w-full h-36"
+        viewBox="0 0 1440 125"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+      >
+        <use href="#wave-shape" />
+      </svg>
+    </div>
     <!-- Contáctanos -->
     <section
       id="contacto"
@@ -1304,17 +1477,16 @@
       </div>
     </section>
     <div class="leading-none overflow-hidden -mt-1 text-[#F7CADD] rotate-180">
-        <svg
-          class="w-full h-36"
-          viewBox="0 0 1440 125"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-        >
-          <use href="#wave-shape" />
-        </svg>
-      </div>
-
+      <svg
+        class="w-full h-36"
+        viewBox="0 0 1440 125"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+      >
+        <use href="#wave-shape" />
+      </svg>
+    </div>
 
     <script>
       const carousel = document.getElementById("carousel");
@@ -1345,5 +1517,6 @@
         carousel.scrollTo({ left: 0 });
       });
     </script>
+    <script src="countdown.js"></script>
   </body>
 </html>
