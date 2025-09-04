@@ -205,7 +205,7 @@
             </a>
             <a
               href="escuelas.html"
-              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold bg-light-purple"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
             >
               <span
                 ><svg
@@ -233,7 +233,7 @@
             </a>
             <a
               href="alumnos.html"
-              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold bg-light-purple"
             >
               <span
                 ><svg
@@ -398,14 +398,60 @@
           <div
             class="flex justify-between items-center p-4 bg-pale-yellow rounded-t-xl"
           >
-            <h3 class="text-xl font-bold text-dark-purple">
-              Lista de escuelas
-            </h3>
+            <h3 class="text-xl font-bold text-dark-purple">Lista de alumnos</h3>
             <div class="relative inline-block space-x-2">
-              <!-- Botón -->
+              <!-- Botones -->
               <a
                 href="#"
-                id="openMenuBtn"
+                id="addGroupBtn"
+                class="text-dark-purple font-bold text-sm inline-flex items-center mr-4"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.2 7.7C17 8.1 16.8 8.5 16.6 8.8C16.1 9.7 15.1 10.3 14.1 10.3C13.1 10.3 12.1 9.7 11.6 8.8C11.4 8.4 11.2 8 11 7.6C10.7 7.4 10.3 7.3 9.9 7C9 6.5 8.5 5.5 8.5 4.5C8.5 3.4 9.1 2.5 10 1.9C10.4 1.7 10.7 1.5 11.1 1.3C11.3 0.9 11.5 0.5 11.7 0.1C11.7 0.1 11.7 0 11.8 0C10.9 0 10 0 9.1 0C7.5 0 6 0 4.5 0.1C2.2 0.2 0.3 2.1 0.1 4.6C1.1 3.1 2.9 2.3 4.7 2.9C6.9 3.5 8.2 5.9 7.6 8.1C7 10.3 4.7 11.6 2.5 11C1.4 10.7 0.6 10 0 9C0 10.4 0 11.7 0.1 13.4C0.2 15.9 2.1 17.8 4.4 17.9C5.2 17.9 6 18 6.8 18C5.5 17 4.8 15.2 5.3 13.5C5.9 11.2 8.2 9.9 10.4 10.6C12.6 11.2 13.9 13.6 13.3 15.8C13 16.7 12.5 17.4 11.8 18C12.3 18 12.8 18 13.3 17.9C15.6 17.8 17.5 15.7 17.6 13.2C17.7 11 17.7 9.3 17.7 7.4C17.5 7.5 17.4 7.6 17.2 7.7Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M17.5002 3.70001C17.0002 3.40001 16.6002 3.20001 16.1002 3.00001C15.9002 2.90001 15.7002 2.70001 15.6002 2.50001C15.4002 2.00001 15.2002 1.60001 14.9002 1.10001C14.7002 0.800006 14.4002 0.600006 14.1002 0.600006C13.8002 0.600006 13.5002 0.800006 13.3002 1.10001C13.1002 1.50001 12.8002 2.00001 12.7002 2.40001C12.6002 2.60001 12.4002 2.80001 12.2002 2.90001C11.8002 3.10001 11.3002 3.30001 10.9002 3.60001C10.3002 4.00001 10.3002 4.90001 10.9002 5.30001C11.3002 5.50001 11.8002 5.80001 12.2002 6.00001C12.4002 6.10001 12.6002 6.30001 12.7002 6.50001C12.9002 7.00001 13.1002 7.40001 13.4002 7.90001C13.6002 8.20001 13.9002 8.40001 14.2002 8.40001C14.5002 8.40001 14.8002 8.20001 15.0002 7.90001C15.2002 7.50001 15.5002 7.00001 15.7002 6.50001C15.8002 6.30001 16.0002 6.10001 16.2002 6.00001C16.7002 5.80001 17.2002 5.60001 17.6002 5.30001C18.2002 4.90001 18.1002 4.00001 17.5002 3.70001Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M10.1996 13.9C10.0996 13.9 9.89965 13.9 9.79965 13.9C9.69965 14 9.59965 14.1 9.59965 14.2L9.49965 14.7C9.39965 15 9.59965 15.3 9.89965 15.4H9.99965C10.1996 15.4 10.3996 15.2 10.4996 15L10.5996 14.5C10.5996 14.3 10.4996 14 10.1996 13.9Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M8.80045 15.8C8.60045 16 8.10045 16 7.90045 15.8C7.80045 15.7 7.60045 15.7 7.50045 15.7C7.40045 15.7 7.30045 15.8 7.20045 15.9C7.10045 16.1 7.10045 16.4 7.30045 16.6C7.30045 16.6 7.30045 16.6 7.40045 16.6C7.60045 16.9 8.00045 17 8.30045 17C8.70045 17 9.10045 16.9 9.40045 16.7C9.60045 16.5 9.70045 16.2 9.50045 16C9.30045 15.7 9.00045 15.7 8.80045 15.8Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M7.40004 14.7C7.60004 14.7 7.80004 14.5 7.90004 14.3L8.00004 13.9C8.10004 13.6 7.90004 13.3 7.60004 13.2C7.30004 13.1 7.00004 13.3 7.00004 13.6L6.90004 14C6.80004 14.3 7.00004 14.6 7.30004 14.7H7.40004Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M2.8998 6C2.5998 6 2.3998 6.2 2.2998 6.5V7C2.2998 7.2 2.3998 7.5 2.5998 7.5H2.6998C2.9998 7.5 3.1998 7.3 3.2998 7V6.5C3.2998 6.4 3.2998 6.2 3.1998 6.1C3.1998 6 3.0998 6 2.8998 6Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M4.50006 8.59999C4.30006 8.59999 3.80006 8.49999 3.70006 8.29999C3.50006 7.99999 3.20006 7.89999 2.90006 8.09999C2.70006 8.29999 2.70006 8.59999 2.80006 8.79999C3.00006 9.09999 3.40006 9.39999 3.70006 9.49999C4.00006 9.59999 4.30006 9.69999 4.60006 9.59999C4.60006 9.59999 4.60006 9.59999 4.70006 9.59999C5.00006 9.49999 5.10006 9.19999 5.10006 8.99999C5.10006 8.89999 5.00006 8.69999 4.90006 8.69999C4.80006 8.59999 4.60006 8.49999 4.50006 8.59999Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M5.3 7.60001H5.4C5.8 7.70001 6 7.50001 6 7.20001V6.70001C6 6.40001 5.8 6.20001 5.5 6.10001C5.3 6.10001 5 6.30001 5 6.60001V7.10001C5 7.30001 5.1 7.60001 5.3 7.60001Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+
+                <span class="ml-2">Registrar grupo</span>
+              </a>
+              <a
+                href="#"
+                id="addStudentBtn"
                 class="text-dark-purple font-bold text-sm inline-flex items-center"
               >
                 <svg
@@ -414,22 +460,17 @@
                   viewBox="0 0 18 18"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="inline"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.97177 0.0857143C0.254787 0.342857 6.97357e-05 0.942857 6.97357e-05 9C6.97357e-05 18.2571 -0.254647 17.9143 6.96233 17.9143C11.3774 17.9143 11.9718 17.9143 12.1416 17.5714C12.7359 16.6286 12.1416 16.5429 7.30196 16.5429C2.80196 16.5429 2.80196 16.5429 2.20762 16.0286L1.61328 15.4286L1.52837 9.25714C1.44347 0.685714 0.679316 1.45714 9.16988 1.45714H15.5378L16.0472 2.05714C16.5567 2.65714 16.5567 2.74286 16.5567 8.91428V15.1714L15.9623 15.7714C15.6227 16.1143 15.1982 16.3714 14.9435 16.3714C14.3491 16.3714 14.0095 16.8857 14.1793 17.4C14.5189 18.5143 17.151 17.4857 17.7454 16.0286C18.1699 14.9143 18.2548 2.82857 17.7454 1.8C17.151 0.257143 16.5567 0.0857143 13.8397 0C7.04724 0 4.24535 0 2.97177 0.0857143Z"
+                    d="M17.5 13.3C17 13 16.5 12.8 16.1 12.6C15.9 12.5 15.7 12.3 15.6 12.1C15.4 11.6 15.1 11.2 14.9 10.7C14.5 10.1 13.6 10.1 13.2 10.7C13 11.1 12.7 11.6 12.5 12C12.4 12.2 12.2 12.4 12 12.5C11.6 12.7 11.1 12.9 10.7 13.2C10.1 13.6 10.1 14.5 10.7 14.9C11.1 15.1 11.6 15.4 12 15.6C12.2 15.7 12.4 15.9 12.5 16.1C12.7 16.6 12.9 17 13.2 17.5C13.6 18.1 14.5 18.1 14.8 17.5C15.1 17.1 15.3 16.6 15.5 16.1C15.6 15.9 15.8 15.7 16 15.6C16.5 15.4 17 15.2 17.4 14.9C18.2 14.6 18.1 13.7 17.5 13.3Z"
                     fill="#7B64B1"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M13.5 8.3143C13.2453 8.22858 11.6321 8.14287 9.84909 8.14287C9.84909 6.42859 9.76418 4.88573 9.67928 4.54287C9.42456 4.02859 8.4906 3.94287 8.32079 4.45716C8.15098 4.7143 8.15098 6.34287 8.15098 8.14287C6.19815 8.14287 4.50003 8.22858 4.41513 8.40001C3.9906 8.82858 4.0755 9.34287 4.58494 9.60001C4.83966 9.68573 6.45286 9.77144 8.23588 9.77144C8.23588 11.7429 8.32079 13.4572 8.4906 13.5429C8.91513 13.9714 9.42456 13.8857 9.67928 13.3714C9.76418 13.1143 9.84909 11.5714 9.84909 9.77144C11.5472 9.77144 13.0755 9.68573 13.4151 9.60001C13.9246 9.42858 14.0095 8.48573 13.5 8.3143Z"
-                    fill="#5280E4"
+                    d="M9.7998 16.7C8.89981 16.2 8.2998 15.2 8.2998 14.1C8.2998 13 8.89981 12.1 9.7998 11.5C10.1998 11.3 10.4998 11.1 10.8998 10.9C11.0998 10.5 11.2998 10.1 11.4998 9.7C11.9998 8.9 12.9998 8.3 14.0998 8.3C15.1998 8.3 16.0998 8.9 16.6998 9.8C16.8998 10.2 17.0998 10.6 17.2998 10.9C17.4998 11 17.7998 11.2 17.9998 11.3C18.0998 9.1 17.9998 7.2 17.8998 4.7C17.7998 2.1 15.7998 0.1 13.4998 0C11.9998 0 10.4998 0 9.0998 0C7.5998 0 6.0998 0 4.5998 0.1C2.2998 0.2 0.299805 2.1 0.199805 4.6C-0.00019531 7.8 -0.00019531 10.1 0.199805 13.3C0.399805 15.8 2.1998 17.7 4.4998 17.8C5.9998 18 7.5998 18 9.0998 18C9.7998 18 10.4998 18 11.1998 18C11.0998 17.8 10.9998 17.6 10.8998 17.3C10.4998 17.1 10.1998 16.9 9.7998 16.7ZM8.9998 4.3C8.9998 3.9 9.39981 3.5 9.7998 3.5C10.1998 3.5 10.5998 3.9 10.5998 4.3V5.2C10.5998 5.6 10.1998 6 9.7998 6C9.39981 6 8.9998 5.7 8.9998 5.2V4.3ZM3.6998 5.2V4.3C3.6998 3.9 4.0998 3.5 4.4998 3.5C4.8998 3.5 5.2998 3.9 5.2998 4.3V5.2C5.2998 5.7 4.9998 6 4.4998 6C3.9998 6 3.6998 5.7 3.6998 5.2ZM4.7998 8.8C4.4998 8.4 4.5998 7.9 4.8998 7.7C5.1998 7.4 5.7998 7.5 5.9998 7.8C6.4998 8.3 7.4998 8.6 7.9998 8.4C8.3998 8.3 8.8998 8.6 8.9998 9C9.0998 9.4 8.8998 9.8 8.4998 10H8.3998C7.1998 10.3 5.5998 9.8 4.7998 8.8Z"
+                    fill="#7B64B1"
                   />
                 </svg>
-                <span class="ml-2">Agregar escuela</span>
+                <span class="ml-2">Registrar alumno</span>
               </a>
 
               <!-- Menú -->
@@ -540,117 +581,307 @@
           </div>
 
           <div class="min-w-screen bg-white">
-            <div class="bg-white rounded-xl shadow p-6">
-              <table
-                class="min-w-full divide-y divide-gray-200 text-sm text-gray-700"
-                id="schoolTable"
+            <div class="flex m-2">
+              <!-- Tab: Grupos -->
+              <button
+                class="tab-button flex items-center gap-2 px-4 py-2 justify-center border-b-2 border-transparent text-dark-purple font-semibold hover:border-pale-purple"
+                data-tab="grupos"
+                id="tab-grupos"
               >
-                <thead
-                  class="bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase"
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <tr>
-                    <th class="px-4 py-3">Logo</th>
-                    <th class="px-4 py-3">Nombre</th>
-                    <th class="px-4 py-3">CCT</th>
-                    <th class="px-4 py-3">Zona</th>
-                    <th class="px-4 py-3">Dirección</th>
-                    <th class="px-4 py-3">OPC</th>
-                  </tr>
-                </thead>
-                <tbody
-                  class="divide-y divide-gray-200"
-                  id="schoolTableBody"
-                ></tbody>
-              </table>
+                  <path
+                    d="M17.2 7.7C17 8.1 16.8 8.5 16.6 8.8C16.1 9.7 15.1 10.3 14.1 10.3C13.1 10.3 12.1 9.7 11.6 8.8C11.4 8.4 11.2 8 11 7.6C10.7 7.4 10.3 7.3 9.9 7C9 6.5 8.5 5.5 8.5 4.5C8.5 3.4 9.1 2.5 10 1.9C10.4 1.7 10.7 1.5 11.1 1.3C11.3 0.9 11.5 0.5 11.7 0.1C11.7 0.1 11.7 0 11.8 0C10.9 0 10 0 9.1 0C7.5 0 6 0 4.5 0.1C2.2 0.2 0.3 2.1 0.1 4.6C1.1 3.1 2.9 2.3 4.7 2.9C6.9 3.5 8.2 5.9 7.6 8.1C7 10.3 4.7 11.6 2.5 11C1.4 10.7 0.6 10 0 9C0 10.4 0 11.7 0.1 13.4C0.2 15.9 2.1 17.8 4.4 17.9C5.2 17.9 6 18 6.8 18C5.5 17 4.8 15.2 5.3 13.5C5.9 11.2 8.2 9.9 10.4 10.6C12.6 11.2 13.9 13.6 13.3 15.8C13 16.7 12.5 17.4 11.8 18C12.3 18 12.8 18 13.3 17.9C15.6 17.8 17.5 15.7 17.6 13.2C17.7 11 17.7 9.3 17.7 7.4C17.5 7.5 17.4 7.6 17.2 7.7Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M17.5002 3.70001C17.0002 3.40001 16.6002 3.20001 16.1002 3.00001C15.9002 2.90001 15.7002 2.70001 15.6002 2.50001C15.4002 2.00001 15.2002 1.60001 14.9002 1.10001C14.7002 0.800006 14.4002 0.600006 14.1002 0.600006C13.8002 0.600006 13.5002 0.800006 13.3002 1.10001C13.1002 1.50001 12.8002 2.00001 12.7002 2.40001C12.6002 2.60001 12.4002 2.80001 12.2002 2.90001C11.8002 3.10001 11.3002 3.30001 10.9002 3.60001C10.3002 4.00001 10.3002 4.90001 10.9002 5.30001C11.3002 5.50001 11.8002 5.80001 12.2002 6.00001C12.4002 6.10001 12.6002 6.30001 12.7002 6.50001C12.9002 7.00001 13.1002 7.40001 13.4002 7.90001C13.6002 8.20001 13.9002 8.40001 14.2002 8.40001C14.5002 8.40001 14.8002 8.20001 15.0002 7.90001C15.2002 7.50001 15.5002 7.00001 15.7002 6.50001C15.8002 6.30001 16.0002 6.10001 16.2002 6.00001C16.7002 5.80001 17.2002 5.60001 17.6002 5.30001C18.2002 4.90001 18.1002 4.00001 17.5002 3.70001Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M10.1996 13.9C10.0996 13.9 9.89965 13.9 9.79965 13.9C9.69965 14 9.59965 14.1 9.59965 14.2L9.49965 14.7C9.39965 15 9.59965 15.3 9.89965 15.4H9.99965C10.1996 15.4 10.3996 15.2 10.4996 15L10.5996 14.5C10.5996 14.3 10.4996 14 10.1996 13.9Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M8.80045 15.8C8.60045 16 8.10045 16 7.90045 15.8C7.80045 15.7 7.60045 15.7 7.50045 15.7C7.40045 15.7 7.30045 15.8 7.20045 15.9C7.10045 16.1 7.10045 16.4 7.30045 16.6C7.30045 16.6 7.30045 16.6 7.40045 16.6C7.60045 16.9 8.00045 17 8.30045 17C8.70045 17 9.10045 16.9 9.40045 16.7C9.60045 16.5 9.70045 16.2 9.50045 16C9.30045 15.7 9.00045 15.7 8.80045 15.8Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M7.40004 14.7C7.60004 14.7 7.80004 14.5 7.90004 14.3L8.00004 13.9C8.10004 13.6 7.90004 13.3 7.60004 13.2C7.30004 13.1 7.00004 13.3 7.00004 13.6L6.90004 14C6.80004 14.3 7.00004 14.6 7.30004 14.7H7.40004Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M2.8998 6C2.5998 6 2.3998 6.2 2.2998 6.5V7C2.2998 7.2 2.3998 7.5 2.5998 7.5H2.6998C2.9998 7.5 3.1998 7.3 3.2998 7V6.5C3.2998 6.4 3.2998 6.2 3.1998 6.1C3.1998 6 3.0998 6 2.8998 6Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M4.50006 8.59999C4.30006 8.59999 3.80006 8.49999 3.70006 8.29999C3.50006 7.99999 3.20006 7.89999 2.90006 8.09999C2.70006 8.29999 2.70006 8.59999 2.80006 8.79999C3.00006 9.09999 3.40006 9.39999 3.70006 9.49999C4.00006 9.59999 4.30006 9.69999 4.60006 9.59999C4.60006 9.59999 4.60006 9.59999 4.70006 9.59999C5.00006 9.49999 5.10006 9.19999 5.10006 8.99999C5.10006 8.89999 5.00006 8.69999 4.90006 8.69999C4.80006 8.59999 4.60006 8.49999 4.50006 8.59999Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M5.3 7.60001H5.4C5.8 7.70001 6 7.50001 6 7.20001V6.70001C6 6.40001 5.8 6.20001 5.5 6.10001C5.3 6.10001 5 6.30001 5 6.60001V7.10001C5 7.30001 5.1 7.60001 5.3 7.60001Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+                Grupos
+              </button>
+
+              <!-- Tab: Alumnos -->
+              <button
+                class="tab-button flex items-center gap-2 px-4 py-2 justify-center border-b-2 border-transparent text-dark-purple font-semibold hover:border-pale-purple"
+                data-tab="alumnos"
+                id="tab-alumnos"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.5 13.3C17 13 16.5 12.8 16.1 12.6C15.9 12.5 15.7 12.3 15.6 12.1C15.4 11.6 15.1 11.2 14.9 10.7C14.5 10.1 13.6 10.1 13.2 10.7C13 11.1 12.7 11.6 12.5 12C12.4 12.2 12.2 12.4 12 12.5C11.6 12.7 11.1 12.9 10.7 13.2C10.1 13.6 10.1 14.5 10.7 14.9C11.1 15.1 11.6 15.4 12 15.6C12.2 15.7 12.4 15.9 12.5 16.1C12.7 16.6 12.9 17 13.2 17.5C13.6 18.1 14.5 18.1 14.8 17.5C15.1 17.1 15.3 16.6 15.5 16.1C15.6 15.9 15.8 15.7 16 15.6C16.5 15.4 17 15.2 17.4 14.9C18.2 14.6 18.1 13.7 17.5 13.3Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M9.7998 16.7C8.89981 16.2 8.2998 15.2 8.2998 14.1C8.2998 13 8.89981 12.1 9.7998 11.5C10.1998 11.3 10.4998 11.1 10.8998 10.9C11.0998 10.5 11.2998 10.1 11.4998 9.7C11.9998 8.9 12.9998 8.3 14.0998 8.3C15.1998 8.3 16.0998 8.9 16.6998 9.8C16.8998 10.2 17.0998 10.6 17.2998 10.9C17.4998 11 17.7998 11.2 17.9998 11.3C18.0998 9.1 17.9998 7.2 17.8998 4.7C17.7998 2.1 15.7998 0.1 13.4998 0C11.9998 0 10.4998 0 9.0998 0C7.5998 0 6.0998 0 4.5998 0.1C2.2998 0.2 0.299805 2.1 0.199805 4.6C-0.00019531 7.8 -0.00019531 10.1 0.199805 13.3C0.399805 15.8 2.1998 17.7 4.4998 17.8C5.9998 18 7.5998 18 9.0998 18C9.7998 18 10.4998 18 11.1998 18C11.0998 17.8 10.9998 17.6 10.8998 17.3C10.4998 17.1 10.1998 16.9 9.7998 16.7ZM8.9998 4.3C8.9998 3.9 9.39981 3.5 9.7998 3.5C10.1998 3.5 10.5998 3.9 10.5998 4.3V5.2C10.5998 5.6 10.1998 6 9.7998 6C9.39981 6 8.9998 5.7 8.9998 5.2V4.3ZM3.6998 5.2V4.3C3.6998 3.9 4.0998 3.5 4.4998 3.5C4.8998 3.5 5.2998 3.9 5.2998 4.3V5.2C5.2998 5.7 4.9998 6 4.4998 6C3.9998 6 3.6998 5.7 3.6998 5.2ZM4.7998 8.8C4.4998 8.4 4.5998 7.9 4.8998 7.7C5.1998 7.4 5.7998 7.5 5.9998 7.8C6.4998 8.3 7.4998 8.6 7.9998 8.4C8.3998 8.3 8.8998 8.6 8.9998 9C9.0998 9.4 8.8998 9.8 8.4998 10H8.3998C7.1998 10.3 5.5998 9.8 4.7998 8.8Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+                Alumnos
+              </button>
             </div>
 
-            <div
-              id="editPopover"
-              class="absolute hidden bg-white shadow-lg rounded-lg border border-gray-200 w-96 px-6 py-6 z-50"
-            >
-              <h2 class="text-md font-medium mb-4 text-center">
-                Editar escuela
-              </h2>
-
-              <!-- Nombre -->
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue"
-                  >Nombre de la escuela</label
+            <!-- Contenido -->
+            <div class="p-4">
+              <!-- Grupos Content -->
+              <div class="tab-content" id="content-grupos">
+                <table
+                  class="min-w-full divide-y divide-gray-200 text-sm text-gray-700"
+                  id="groupTable"
                 >
-                <input
-                  type="text"
-                  id="editSchoolName"
-                  class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
+                  <thead
+                    class="bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase"
+                  >
+                    <tr>
+                      <th class="px-4 py-3">Nombre del grupo</th>
+                      <th class="px-4 py-3">Grado</th>
+                      <th class="px-4 py-3">Grupo (letra)</th>
+                      <th class="px-4 py-3">Turno</th>
+                      <th class="px-4 py-3">Ciclo escolar</th>
+                      <th class="px-4 py-3">No. de niñas</th>
+                      <th class="px-4 py-3">No. de niños</th>
+                      <th class="px-4 py-3"></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="divide-y divide-gray-200"
+                    id="groupTableBody"
+                  ></tbody>
+                </table>
               </div>
 
-              <!-- CCT -->
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue">CCT</label>
-                <input
-                  type="text"
-                  id="editSchoolCCT"
-                  class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-
-              <!-- Zona -->
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue"
-                  >Zona escolar</label
+              <!-- Alumnos Content (inicialmente oculto) -->
+              <div class="tab-content hidden" id="content-alumnos">
+                <table
+                  class="min-w-full divide-y divide-gray-200 text-sm text-gray-700"
+                  id="studentTable"
                 >
-                <input
-                  type="text"
-                  id="editSchoolZone"
-                  class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-
-              <!-- Dirección -->
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue"
-                  >Dirección</label
-                >
-                <input
-                  type="text"
-                  id="editSchoolAddress"
-                  class="mt-1 w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-
-              <!-- Logo -->
-              <div class="mb-4">
-                <label class="block text-sm font-medium text-blue"
-                  >Logo de la escuela</label
-                >
-                <input
-                  type="file"
-                  id="editSchoolLogo"
-                  class="mt-1 w-full text-sm text-gray-700 bg-indigo-100 file:mr-4 file:py-2 file:px-4 rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-blue file:text-white hover:file:bg-indigo-200 file:bg-indigo-400"
-                />
-              </div>
-
-              <!-- Botones -->
-              <div class="flex justify-center space-x-2">
-                <button
-                  id="cancelEditBtn"
-                  class="px-4 py-2 rounded-full bg-white text-blue hover:bg-gray-300 border border-blue-200"
-                >
-                  Cancelar
-                </button>
-                <button
-                  id="updateSchoolBtn"
-                  class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
-                >
-                  Guardar cambios
-                </button>
+                  <thead
+                    class="bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase"
+                  >
+                    <tr>
+                      <th class="px-4 py-3"></th>
+                      <th class="px-4 py-3">Nombre completo</th>
+                      <th class="px-4 py-3">Fecha de nacimiento</th>
+                      <th class="px-4 py-3">CURP</th>
+                      <th class="px-4 py-3">Género</th>
+                      <th class="px-4 py-3">Grupo</th>
+                      <th class="px-4 py-3">Contacto de emergencia</th>
+                      <th class="px-4 py-3"></th>
+                      <!-- Columna para botón de editar -->
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="divide-y divide-gray-200"
+                    id="studentTableBody"
+                  ></tbody>
+                </table>
               </div>
             </div>
           </div>
 
-          <script src="js/scriptEscuelas.js"></script>
+          
         </div>
       </main>
+
+      <!-- Modal principal de alumno -->
+      <div
+        id="studentModal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
+      >
+        <div
+          class="bg-white w-full max-w-4xl rounded-lg shadow-lg relative p-6"
+        >
+          <!-- Íconos (arriba derecha) -->
+          <div class="absolute top-4 right-4 flex gap-4">
+            <!-- Editar -->
+            <button id="editStudentBtn" title="Editar">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.56386 15.93C2.66162 15.3 1.93982 14.22 1.93982 13.05C1.75938 10.53 1.75938 8.01 1.93982 5.49C2.03005 3.6 3.74431 1.98 5.63902 1.89C6.90217 1.89 8.16531 1.8 9.42845 1.8C10.872 1.8 12.4059 1.8 13.8494 1.89C14.8419 1.89 15.7442 2.52 16.1953 3.33C16.3757 3.6 16.6464 3.78 17.0073 3.78C17.7291 3.78 18.1802 2.97 17.8193 2.43C17.0073 1.08 15.5637 0.18 13.9397 0.09C12.3156 0 10.872 0 9.33822 0C7.80441 0 6.27059 0 4.73678 0.09C2.30072 0.18 0.225561 2.07 0.135337 4.5C-0.0451122 7.65 -0.0451122 10.8 0.135337 13.95C0.225561 15.57 1.1278 16.92 2.39095 17.64C3.11274 18.09 4.01499 17.55 4.01499 16.74C4.01499 16.47 3.83454 16.11 3.56386 15.93Z" fill="#7B64B1"/>
+                <path d="M17.9997 9.0901C17.9997 8.4601 17.7291 7.8301 17.278 7.3801L15.2028 5.4001C14.3005 4.5001 12.7667 4.5001 11.7743 5.4001L5.54878 11.5201C4.10519 12.9601 4.01497 15.3901 5.45856 16.8301C6.09013 17.5501 6.99237 17.9101 7.89462 18.0001C7.89462 18.0001 7.89462 18.0001 7.98484 18.0001C8.07507 18.0001 8.07507 18.0001 8.16529 18.0001H8.25551C8.34574 18.0001 8.43596 18.0001 8.43596 18.0001C10.1502 18.0001 14.1201 18.0001 15.9246 17.9101C16.4659 17.9101 16.8268 17.4601 16.8268 16.9201C16.8268 16.3801 16.3757 16.0201 15.8344 16.0201C14.7517 16.0201 13.1276 16.1101 11.684 16.1101L17.0975 10.8901C17.7291 10.4401 17.9997 9.8101 17.9997 9.0901ZM6.90215 12.7801L10.4209 9.3601L13.2179 12.1501L9.69911 15.5701C9.33821 15.9301 8.79686 16.1101 8.25551 16.1101C7.71417 16.1101 7.26305 15.9301 6.90215 15.4801C6.18035 14.7601 6.18035 13.5901 6.90215 12.7801ZM15.9246 9.5401L14.481 10.8901L11.7743 8.1001L13.1276 6.7501C13.3081 6.5701 13.669 6.5701 13.9397 6.7501L16.0148 8.7301C16.105 8.8201 16.1953 9.0001 16.1953 9.1801C16.105 9.2701 16.105 9.4501 15.9246 9.5401Z" fill="#7B64B1"/>
+                </svg>                
+            </button>
+
+            <!-- Eliminar -->
+            <button id="deleteStudentBtn" title="Eliminar">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.2842 2.92611H15.5684H12.7053L11.6316 1.33005C11.0947 0.44335 10.1105 0 9.12632 0H8.05263C7.06842 0 6.08421 0.44335 5.54737 1.24138L4.38421 2.92611H1.43158H0.715789C0.357895 2.92611 0 3.28079 0 3.63547C0 4.07882 0.357895 4.4335 0.715789 4.4335H1.52105L2.14737 14.4532C2.23684 16.4926 3.93684 18 5.99474 18H10.8263C12.8842 18 14.4947 16.4926 14.6737 14.4532L15.4789 4.4335H16.2842C16.7316 4.4335 17 4.07882 17 3.63547C17 3.28079 16.7316 2.92611 16.2842 2.92611ZM6.97895 13.3005C6.97895 13.6552 6.71053 14.0099 6.26316 14.0099C5.81579 14.0099 5.63684 13.6552 5.63684 13.3005V8.42365C5.63684 8.06897 5.90526 7.71429 6.35263 7.71429C6.8 7.71429 7.06842 7.9803 7.06842 8.42365V13.3005H6.97895ZM11.3632 13.3005C11.3632 13.6552 11.0947 14.0099 10.6474 14.0099C10.2 14.0099 9.93158 13.7438 9.93158 13.3005V8.42365C9.93158 8.06897 10.2 7.71429 10.6474 7.71429C11.0947 7.71429 11.3632 7.9803 11.3632 8.42365V13.3005ZM6.97895 2.21675C7.24737 1.95074 7.60526 1.7734 8.05263 1.7734H9.12632C9.57368 1.7734 9.93158 1.95074 10.1105 2.30542L10.5579 2.92611H6.53158L6.97895 2.21675Z" fill="#7B64B1"/>
+                </svg>
+                
+            </button>
+
+            <!-- Cerrar -->
+            <button id="closeStudentModalBtn" title="Cerrar">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.9099 4.5C17.8199 2.07 15.8399 0.18 13.4999 0.09C11.9699 0 10.5299 0 9.08992 0C7.55992 0 6.11992 0 4.58992 0.09C2.24992 0.18 0.269922 1.98 0.179922 4.41C-7.81193e-05 7.47 -7.81193e-05 10.53 0.179922 13.59C0.359922 15.93 2.24992 17.73 4.49992 17.91C6.02992 18 7.55992 18 9.08992 18C10.6199 18 12.0599 18 13.5899 17.91C15.9299 17.82 17.8199 15.84 17.9099 13.5C17.9999 10.44 17.9999 7.47 17.9099 4.5ZM16.1099 13.41C16.0199 14.85 14.8499 16.02 13.4999 16.11C12.0599 16.2 10.5299 16.2 9.08992 16.2C7.55992 16.2 6.11992 16.2 4.58992 16.11C3.14992 16.02 2.06992 14.94 1.97992 13.5C1.79992 10.53 1.79992 7.47 1.97992 4.5C2.06992 3.06 3.23992 1.98 4.67992 1.89C6.11992 1.8 7.64992 1.8 9.08992 1.8C10.5299 1.8 11.9699 1.8 13.4099 1.89C14.8499 1.98 16.0199 3.15 16.1099 4.59C16.1999 7.56 16.1999 10.44 16.1099 13.41Z" fill="#7B64B1"/>
+                <path d="M11.9698 10.71L10.2598 9.00001L11.9698 7.29001C12.3298 6.93001 12.3298 6.39001 11.9698 6.03001C11.6098 5.67001 11.0698 5.67001 10.7098 6.03001L8.99977 7.74001L7.28977 6.03001C6.92977 5.67001 6.38977 5.67001 6.02977 6.03001C5.66977 6.39001 5.66977 6.93001 6.02977 7.29001L7.73977 9.00001L6.02977 10.71C5.66977 11.07 5.66977 11.61 6.02977 11.97C6.38977 12.33 6.92977 12.33 7.28977 11.97L8.99977 10.26L10.7098 11.97C11.0698 12.33 11.6098 12.33 11.9698 11.97C12.3298 11.61 12.3298 11.07 11.9698 10.71Z" fill="#7B64B1"/>
+                </svg>
+                
+            </button>
+          </div>
+
+          <!-- Imagen del alumno -->
+          <div class="flex justify-center mb-6 mt-4">
+            <img
+              id="studentImage"
+              src="https://via.placeholder.com/100"
+              class="w-24 h-24 rounded-full object-cover"
+              alt="Alumno"
+            />
+          </div>
+
+          <!-- Contenido -->
+          <form id="studentForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-24">
+            <!-- Columna 1 -->
+            <div class="space-y-2">
+              <label class="block mb-4">
+                <span class="block mb-1">Nombre completo:</span>
+                <input name="nombre" type="text" class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" readonly />
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Fecha de nacimiento:</span>
+                <input
+                  name="fechaNacimiento"
+                  type="date"
+                  class="input-field font-semibold"
+                  readonly
+                />
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">CURP:</span>
+                <input name="curp" type="text" class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" readonly />
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Género:</span>
+                <select name="genero" class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" disabled>
+                  <option value="">Selecciona</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                </select>
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Grupo:</span>
+                <input name="grupo" type="text" class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" readonly />
+              </label>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="space-y-2">
+              <label class="block mb-4">
+                <span class="block mb-1">Tutores:</span>
+                <input
+                  name="tutores"
+                  type="text"
+                  class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  readonly
+                />
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Contacto de emergencia:</span>
+                <input
+                  name="contactoEmergencia"
+                  type="text"
+                  class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  readonly
+                />
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Necesidades especiales:</span>
+                <textarea
+                  name="necesidades"
+                  class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  readonly
+                ></textarea>
+              </label>
+              <label class="block mb-4">
+                <span class="block mb-1">Observaciones:</span>
+                <textarea
+                  name="observaciones"
+                  class="input-field font-semibold w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  readonly
+                ></textarea>
+              </label>
+            </div>
+          </form>
+          <div class="flex justify-center space-x-2 mt-4 hidden" id="editButtons">
+            <button
+              id="cancelEditBtn"
+              class="px-4 py-2 mr-2 rounded-full bg-white text-blue hover:bg-gray-300 border border-blue-200"
+            >
+              Cancelar
+            </button>
+            <button
+              id="saveEditBtn"
+              class="px-4 py-2 ml-2 rounded-full bg-blue text-white hover:bg-indigo-400"
+            >
+              Guardar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de confirmación -->
+      <div
+        id="deleteConfirmModal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
+      >
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md text-center">
+          <h2 class="text-lg font-semibold mb-4">
+            ¿Estás seguro de eliminar al alumno?
+          </h2>
+          <div class="flex justify-center gap-4 mt-6">
+            <button
+              id="cancelDeleteBtn"
+              class="px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded"
+            >
+              Cancelar
+            </button>
+            <button
+              id="confirmDeleteBtn"
+              class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded"
+            >
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="js/scriptAlumnos.js"></script>
   </body>
 </html>

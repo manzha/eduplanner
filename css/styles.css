@@ -153,6 +153,11 @@ button.eduplanner-toggle-password:focus{
 .border-pale-purple {
   border-color: #BAAED6;
 }
+
+.hover\:border-pale-purple:hover {
+  border-color: #BAAED6;
+}
+
 body {
     font-family: Onest;
 }
