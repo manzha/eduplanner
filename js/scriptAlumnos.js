@@ -94,6 +94,17 @@ function renderGroupTable(groupArray) {
 
     tableBody.appendChild(row);
   });
+
+   // Abrir en modo vista (puedes adaptar con dataset más adelante)
+   document.querySelectorAll(".viewGroupBtn").forEach((viewBtn) => {
+    viewBtn?.addEventListener("click", () => {
+      console.log("Botón de vista clickeado", viewBtn.dataset.index);
+      const groupId = viewBtn.dataset.index;
+      const currentGroup = groupArray[groupId];
+      currentGroupIndex = groupId;
+      openGroupModal("view", currentGroup);
+    });
+  }); 
 }
 
 function renderStudentTable(studentArray) {
@@ -129,9 +140,9 @@ function renderStudentTable(studentArray) {
   document.querySelectorAll(".viewStudentBtn").forEach((viewBtn) => {
     viewBtn?.addEventListener("click", () => {
       console.log("Botón de vista clickeado", viewBtn.dataset.index);
-      currentStudentIndex = 0;
       const studentId = viewBtn.dataset.index;
       const currentStudent = studentArray[studentId];
+      currentStudentIndex = studentId;
       openStudentModal("view", currentStudent);
     });
   }); 
@@ -169,7 +180,7 @@ tabButtons.forEach(button => {
 document.getElementById("tab-grupos").click();
 
 
-
+// Alumnos
 
 const studentModal = document.getElementById("studentModal");
 const deleteConfirmModal = document.getElementById("deleteConfirmModal");
@@ -181,6 +192,7 @@ const closeBtn = document.getElementById("closeStudentModalBtn");
 const cancelEditBtn = document.getElementById("cancelEditBtn");
 const editBtn = document.getElementById("editStudentBtn");
 const deleteBtn = document.getElementById("deleteStudentBtn");
+const saveEditBtn = document.getElementById("saveEditBtn");
 
 const cancelDeleteBtn = document.getElementById("cancelDeleteBtn");
 const confirmDeleteBtn = document.getElementById("confirmDeleteBtn");
@@ -209,6 +221,7 @@ function openStudentModal(mode = "view", student = {}) {
       span?.classList.remove("text-blue"); // añade la clase
       document.getElementById("editButtons").classList.add("hidden");
       document.getElementById("studentImage").classList.remove("hidden");
+      document.getElementById("studentImageFile").classList.add("hidden");
     } else {
       field.removeAttribute("readonly");
       field.removeAttribute("disabled");
@@ -221,6 +234,7 @@ function openStudentModal(mode = "view", student = {}) {
 
       document.getElementById("editButtons").classList.remove("hidden");
       document.getElementById("studentImage").classList.add("hidden");
+      document.getElementById("studentImageFile").classList.remove("hidden");
     }
   }
 
@@ -270,10 +284,199 @@ cancelEditBtn?.addEventListener("click", () => {
   studentModal.classList.add("hidden");
 });
 
+saveEditBtn?.addEventListener("click", () => {
+  const formData = new FormData(studentForm);
+
+  const newStudent = {
+    nombre: formData.get("nombre"),
+    fechaNacimiento: formData.get("fechaNacimiento"),
+    curp: formData.get("curp"),
+    genero: formData.get("genero"),
+    grupo: formData.get("grupo"),
+    tutores: formData.get("tutores"),
+    contactoEmergencia: formData.get("contactoEmergencia"),
+    necesidades: formData.get("necesidades"),
+    observaciones: formData.get("observaciones"),
+    imagen: document.getElementById("studentImage")?.src || "" // si se usa imagen
+  };
+
+  // Añadir al arreglo
+  if (currentStudentIndex === null) {
+    // Es alta → push al arreglo
+    studentArray.push(newStudent);
+  } else {
+    // Es edición → actualizar
+    studentArray[currentStudentIndex] = newStudent;
+  }
+
+  // (Opcional) Volver a renderizar la tabla
+  renderStudentTable(studentArray);
+
+  // (Opcional) Cerrar el modal
+  document.getElementById("studentModal")?.classList.add("hidden");
+
+  // (Opcional) Resetear el formulario si es modo alta
+  studentForm.reset();
+});
+
 // Obtener datos del formulario como objeto
 function getFormData() {
   const data = {};
   const fields = studentForm.elements;
+  for (const field of fields) {
+    if (field.name) {
+      data[field.name] = field.value;
+    }
+  }
+  return data;
+}
+
+// Grupos
+
+const groupModal = document.getElementById("groupModal");
+const deleteGroupConfirmModal = document.getElementById("deleteGroupConfirmModal");
+
+const groupForm = document.getElementById("groupForm");
+const addGroupBtn = document.getElementById("addGroupBtn");
+// const viewBtn = document.getElementById("viewGroupBtn");
+const closeGroupModalBtn = document.getElementById("closeGroupModalBtn");
+const cancelEditGroupBtn = document.getElementById("cancelEditGroupBtn");
+const editGroupBtn = document.getElementById("editGroupBtn");
+const deleteGroupBtn = document.getElementById("deleteGroupBtn");
+const saveEditGroupBtn = document.getElementById("saveEditGroupBtn");
+
+const cancelDeleteGroupBtn = document.getElementById("cancelDeleteGroupBtn");
+const confirmDeleteGroupBtn = document.getElementById("confirmDeleteGroupBtn");
+
+// Estado actual del alumno editado
+let currentGroupIndex = null;
+
+// Muestra el modal (modo lectura, edición o alta)
+function openGroupModal(mode = "view", group = {}) {
+  groupModal.classList.remove("hidden");
+
+  const fields = groupForm.elements;
+  for (const field of fields) {
+    if (field.name) {
+      field.value = group[field.name] || "";
+    }
+
+    if (mode === "view") {
+      field.setAttribute("readonly", true);
+      field.setAttribute("disabled", true);
+      field.classList.add("bg-transparent");
+      field.classList.remove("border", "border-gray-300", "mt-1", "rounded-xl", "px-3", "py-2");
+
+      const label = field.closest("label"); // busca el contenedor <label>
+      const span = label?.querySelector("span"); // encuentra el <span> dentro del <label>
+      span?.classList.remove("text-blue"); // añade la clase
+      document.getElementById("editGroupButtons").classList.add("hidden");
+      document.getElementById("viewGroupButtons").classList.remove("hidden");
+      document.getElementById("titleAddNewGroup").classList.add("hidden");
+      document.getElementById("titleEditGroup").classList.add("hidden");
+    } else {
+      field.removeAttribute("readonly");
+      field.removeAttribute("disabled");
+      field.classList.remove("bg-transparent");
+      field.classList.add("border", "border-gray-300", "mt-1", "rounded-xl", "px-3", "py-2");
+
+      const label = field.closest("label"); // busca el contenedor <label>
+      const span = label?.querySelector("span"); // encuentra el <span> dentro del <label>
+      span?.classList.add("text-blue"); // añade la clase
+
+      document.getElementById("editGroupButtons").classList.remove("hidden");
+      document.getElementById("viewGroupButtons").classList.add("hidden");
+      if(currentGroupIndex == null){
+        document.getElementById("titleAddNewGroup").classList.remove("hidden");
+        document.getElementById("titleEditGroup").classList.add("hidden");
+      }else{
+        document.getElementById("titleAddNewGroup").classList.add("hidden");
+        document.getElementById("titleEditGroup").classList.remove("hidden");
+      }
+      
+      
+    }
+  }
+
+}
+
+// Abrir en modo alta
+addGroupBtn?.addEventListener("click", () => {
+  currentGroupIndex = null;
+  openGroupModal("edit");
+});
+
+
+
+// Editar dentro del modal
+editGroupBtn?.addEventListener("click", () => {
+  openGroupModal("edit", getFormDataGroup());
+});
+
+// Eliminar
+deleteGroupBtn?.addEventListener("click", () => {
+  deleteGroupConfirmModal.classList.remove("hidden");
+});
+
+// Confirmar eliminación
+confirmDeleteGroupBtn?.addEventListener("click", () => {
+  if (currentGroupIndex !== null) {
+    groupArray.splice(currentGroupIndex, 1);
+    renderGroupTable(groupArray);
+  }
+  deleteGroupConfirmModal.classList.add("hidden");
+  groupModal.classList.add("hidden");
+});
+
+// Cancelar eliminación
+cancelDeleteGroupBtn?.addEventListener("click", () => {
+  deleteGroupConfirmModal.classList.add("hidden");
+});
+
+// Cerrar modal
+closeGroupModalBtn?.addEventListener("click", () => {
+  groupModal.classList.add("hidden");
+});
+
+cancelEditGroupBtn?.addEventListener("click", () => {
+  groupModal.classList.add("hidden");
+});
+
+saveEditGroupBtn?.addEventListener("click", () => {
+  const formData = new FormData(groupForm);
+
+  const newGroup = {
+    nombre: formData.get("nombre"),
+    grado: formData.get("grado"),
+    letra: formData.get("letra"),
+    turno: formData.get("turno"),
+    cicloEscolar: formData.get("cicloEscolar"),
+    ninas: formData.get("ninas"),
+    ninos: formData.get("ninos")
+  };
+  // Añadir al arreglo
+  if (currentGroupIndex === null) {
+    // Es alta → push al arreglo
+    groupArray.push(newGroup);
+  } else {
+    // Es edición → actualizar
+    groupArray[currentGroupIndex] = newGroup;
+  }
+
+  // (Opcional) Volver a renderizar la tabla
+  renderGroupTable(groupArray);
+
+  // (Opcional) Cerrar el modal
+  document.getElementById("groupModal")?.classList.add("hidden");
+
+  // (Opcional) Resetear el formulario si es modo alta
+  groupForm.reset();
+});
+
+// Obtener datos del formulario como objeto
+function getFormDataGroup() {
+  const data = {};
+  const fields = groupForm.elements;
   for (const field of fields) {
     if (field.name) {
       data[field.name] = field.value;
