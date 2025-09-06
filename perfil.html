@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edu Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      id="wpo_min-header-0-css"
+      href="css/styles.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen font-sans">
+    <div class="absolute inset-0 -z-10 w-full h-full">
+      <svg
+        class="w-full h-full"
+        viewBox="0 0 1440 1024"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_f_307_232)">
+          <ellipse cx="1189.5" cy="896" rx="416.5" ry="403" fill="#8BCAD1" />
+        </g>
+        <g filter="url(#filter1_f_307_232)">
+          <ellipse cx="362" cy="204.5" rx="444" ry="429.5" fill="#BAAED6" />
+        </g>
+        <g filter="url(#filter2_f_307_232)">
+          <ellipse cx="329" cy="922.5" rx="444" ry="429.5" fill="#FEE1B7" />
+        </g>
+        <g filter="url(#filter3_f_307_232)">
+          <ellipse cx="1106" cy="171" rx="453" ry="438" fill="#F7CADD" />
+        </g>
+        <g filter="url(#filter4_n_307_232)">
+          <rect width="1440" height="1024" fill="white" fill-opacity="0.2" />
+        </g>
+        <defs>
+          <filter
+            id="filter0_f_307_232"
+            x="573"
+            y="293"
+            width="1233"
+            height="1206"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="100"
+              result="effect1_foregroundBlur_307_232"
+            />
+          </filter>
+          <filter
+            id="filter1_f_307_232"
+            x="-282"
+            y="-425"
+            width="1288"
+            height="1259"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="100"
+              result="effect1_foregroundBlur_307_232"
+            />
+          </filter>
+          <filter
+            id="filter2_f_307_232"
+            x="-315"
+            y="293"
+            width="1288"
+            height="1259"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="100"
+              result="effect1_foregroundBlur_307_232"
+            />
+          </filter>
+          <filter
+            id="filter3_f_307_232"
+            x="453"
+            y="-467"
+            width="1306"
+            height="1276"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="BackgroundImageFix"
+              result="shape"
+            />
+            <feGaussianBlur
+              stdDeviation="100"
+              result="effect1_foregroundBlur_307_232"
+            />
+          </filter>
+          <filter
+            id="filter4_n_307_232"
+            x="0"
+            y="0"
+            width="1440"
+            height="1024"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+          >
+            <feComposite
+              operator="in"
+              in2="shape"
+              in="coloredNoise1"
+              result="noise1Clipped"
+            />
+            <feComponentTransfer in="noise1Clipped" result="color1">
+              <feFuncA type="table" tableValues="0 0.24" />
+            </feComponentTransfer>
+            <feMerge result="effect1_noise_307_232">
+              <feMergeNode in="shape" />
+              <feMergeNode in="color1" />
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside
+        class="w-64 bg-pale-yellow shadow-lg flex flex-col justify-between m-6 px-2 rounded-xl"
+      >
+        <div>
+          <div class="text-center p-6">
+            <img
+              src="img/edu-planner-logo.png"
+              alt="EduPlanner logo"
+              class="h-12"
+            />
+          </div>
+          <nav class="p-4 space-y-4 mt-6">
+            <a
+              href="app.html"
+              class="flex items-center gap-2 text-dark-purple font-semibold rounded-lg px-3 py-2"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0C6.83673 0 0 6.8 0 9.7C0 11.6 0 13.4 0.204082 15.3C0.408163 17.8 2.44898 19.8 5 19.9C6.73469 20 8.36735 20 10.102 20C11.7347 20 13.3673 20 15.102 19.9C17.7551 19.8 19.7959 17.7 19.898 15.1C20 13.2 20 11.3 20 9.4C19.898 6.7 13.1633 0 10 0ZM17.8571 15.1C17.7551 16.6 16.5306 17.9 15 18C14.3878 18 13.7755 18 13.1633 18.1V13.8C13.1633 12.1 11.7347 10.7 10 10.7H9.69388C7.95918 10.7 6.53061 12.1 6.53061 13.8V18C6.02041 18 5.61224 18 5.10204 17.9C3.57143 17.8 2.34694 16.6 2.2449 15.1C2.04082 13.4 2.04082 11.5 2.04082 9.7C2.04082 9.2 3.06122 7.4 5.30612 5.1C7.44898 3 9.38776 2 10 2C10.6122 2 12.551 2.9 14.6939 5.1C16.9388 7.2 17.9592 9.1 17.9592 9.5C17.9592 11.4 17.9592 13.2 17.8571 15.1Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Inicio
+            </a>
+            <a
+              href="perfil.html"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold bg-light-purple"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.898 5.05155C19.7959 2.37113 17.6531 0.206186 15 0.103093C13.3674 0 11.7347 0 10.102 0C8.46939 0 6.7347 0 5.10205 0.103093C2.44898 0.206186 0.306127 2.26804 0.204087 4.84536C4.98444e-06 8.24742 4.98444e-06 11.6495 0.204087 15.0515C0.408168 17.6289 2.44898 19.6907 5 19.7938C6.7347 19.8969 8.36735 19.8969 10.102 19.8969C11.7347 19.8969 13.3674 19.8969 15.102 19.7938C17.7551 19.6907 19.7959 17.5258 19.898 14.8454C20 11.6495 20 8.35052 19.898 5.05155ZM17.8571 14.8454C17.7551 16.3918 16.5306 17.732 15 17.8351C15 17.8351 15 17.8351 14.898 17.8351V15.7732C14.898 13.6082 13.1633 11.7526 10.9184 11.7526H10H8.9796C6.83674 11.7526 5 13.5052 5 15.7732V17.732C3.46939 17.6289 2.2449 16.3918 2.14286 14.8454C1.93878 11.5464 1.93878 8.24742 2.14286 4.84536C2.2449 3.29897 3.57143 2.06186 5.10205 1.95876C6.83674 2.06186 8.46939 2.06186 10.102 2.06186C11.7347 2.06186 13.2653 2.06186 14.898 2.16495C16.5306 2.26804 17.7551 3.50515 17.8571 5.15464C17.9592 8.35052 17.9592 11.6495 17.8571 14.8454Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M13.5713 8.24742C13.5713 6.28866 11.9387 4.63918 9.9999 4.63918C8.06112 4.63918 6.42847 6.28866 6.42847 8.24742C6.42847 10.2062 8.06112 11.8557 9.9999 11.8557C11.9387 11.8557 13.5713 10.2062 13.5713 8.24742ZM9.9999 9.89691C9.08153 9.89691 8.36724 9.17526 8.36724 8.24742C8.36724 7.31959 9.08153 6.59794 9.9999 6.59794C10.9183 6.59794 11.6325 7.31959 11.6325 8.24742C11.6325 9.17526 10.9183 9.89691 9.9999 9.89691Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Perfil
+            </a>
+            <a
+              href="escuelas.html"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.7339 11.6667C17.7339 13.1373 17.7339 13.7255 17.6354 15.1961C17.5369 16.6667 16.3546 17.9412 14.8768 18.0392C14.2857 18.0392 13.6945 18.0392 13.1034 18.1373V14.902C13.1034 13.2353 11.7241 11.8628 10.0492 11.8628H9.75365C8.07877 11.8628 6.69946 13.2353 6.69946 14.902V18.1373C6.20685 18.1373 5.81276 18.1373 5.32015 18.0392C3.84232 17.9412 2.66005 16.7647 2.56153 15.2941C2.46301 13.8235 2.36449 13.3333 2.36449 11.8628C2.36449 11.3726 1.9704 10.8824 1.37926 10.8824C0.788132 10.8824 0.394043 11.2745 0.394043 11.8628C0.394043 13.3333 0.492565 13.8235 0.591087 15.2941C0.788132 17.8431 2.8571 19.8039 5.32015 19.902C6.89651 20 8.57138 20 10.1477 20C11.7241 20 13.3004 20 14.9753 19.902C17.5369 19.8039 19.5073 17.7451 19.6059 15.1961C19.7044 13.7255 19.7044 13.1373 19.7044 11.6667C19.7044 11.0784 19.2118 10.6863 18.7192 10.6863C18.128 10.6863 17.7339 11.0784 17.7339 11.6667Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M19.0148 7.05882C18.8177 7.45098 18.6207 7.84313 18.4236 8.23529C17.931 9.11764 16.9458 9.70588 15.8621 9.70588C14.7783 9.80392 13.7931 9.21568 13.3005 8.23529C13.1034 7.84313 12.9064 7.45098 12.7093 6.96078C12.3153 6.7647 11.9212 6.56862 11.6256 6.37254C10.6404 5.88235 10.0492 4.90196 10.0492 3.92156C10.0492 2.84313 10.6404 1.86274 11.5271 1.37254C11.9212 1.17647 12.3153 0.980388 12.7093 0.784309C12.8079 0.588231 12.9064 0.392152 13.0049 0.294113C10.2463 -0.0980437 7.1921 -0.0980436 4.92609 0.588231C-1.93734e-05 2.15686 -1.92784e-05 5.78431 -1.92784e-05 5.78431C-1.92784e-05 5.78431 -0.394108 8.72549 2.66008 9.5098C5.71427 10.2941 7.29062 8.92157 7.29062 8.92157C7.29062 8.92157 7.78323 9.80392 9.8522 9.80392C11.9212 9.80392 12.9064 8.92157 12.9064 8.92157C12.9064 8.92157 14.6798 10.1961 17.1428 9.80392C19.2118 9.5098 19.8029 7.35294 19.9015 6.56862C19.7044 6.7647 19.3103 6.96078 19.0148 7.05882Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M17.9311 5.39216C18.4237 5.19608 18.9163 5 19.4089 4.70588C20.0986 4.31373 20 3.43137 19.4089 3.03922C18.9163 2.7451 18.4237 2.54902 17.9311 2.35294C17.734 2.2549 17.537 2.05882 17.4385 1.86275C17.2414 1.37255 16.9459 0.882353 16.7488 0.490196C16.5518 0.196078 16.1577 0 15.8621 0C15.5665 0 15.1725 0.196078 14.9754 0.490196C14.7784 0.980392 14.5813 1.37255 14.3843 1.86275C14.2858 2.05882 14.0887 2.2549 13.8917 2.35294C13.3991 2.54902 13.005 2.7451 12.5124 3.03922C11.8227 3.43137 11.8227 4.31373 12.5124 4.70588C12.9064 5 13.3991 5.19608 13.8917 5.39216C14.0887 5.4902 14.2858 5.68627 14.3843 5.88235C14.5813 6.37255 14.7784 6.86275 15.0739 7.2549C15.1725 7.64706 15.5665 7.84314 15.8621 7.84314C16.1577 7.84314 16.5518 7.64706 16.7488 7.35294C16.9459 6.86275 17.1429 6.37255 17.4385 5.88235C17.537 5.68627 17.734 5.4902 17.9311 5.39216Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Escuelas
+            </a>
+            <a
+              href="alumnos.html"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.88047 2.20096C4.68908 2.20096 4.49769 2.00957 4.402 1.91388L3.92353 1.14832C3.73214 0.861244 3.34937 0.861244 3.06228 1.14832L2.58382 1.91388C2.48812 2.00957 2.29673 2.20096 2.10535 2.20096L1.2441 2.48804C0.861328 2.58373 0.765634 2.96651 0.957022 3.25359L1.53118 4.01914C1.62688 4.21053 1.72257 4.40191 1.72257 4.5933V5.45455C1.72257 5.83732 2.00965 6.02871 2.39243 5.93301L3.25367 5.64593C3.44506 5.55024 3.63645 5.55024 3.82784 5.64593L4.68908 5.93301C4.97616 6.02871 5.35894 5.83732 5.35894 5.45455V4.49761C5.35894 4.30622 5.45463 4.11483 5.55032 3.92344L6.12449 3.15789C6.22018 2.96651 6.12449 2.58373 5.74171 2.48804L4.88047 2.20096Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M9.95215 0C8.70813 0 7.55981 0.287081 6.41148 0.669856L7.08134 0.861244C7.6555 1.05263 8.13397 1.5311 8.32536 2.10526C8.51675 2.67943 8.42105 3.34928 8.03828 3.82775L7.17703 4.88038V6.2201C7.17703 6.69857 6.98565 7.17703 6.69856 7.55981C6.41148 7.94258 5.83732 8.13397 5.35885 8.13397C5.16746 8.13397 4.97608 8.13397 4.78469 8.03828L3.44498 7.55981L2.20096 8.03828C2.00957 8.03828 1.81818 8.13397 1.62679 8.13397C1.14833 8.13397 0.669856 7.94258 0.382775 7.55981C0.0956938 8.32536 0 9.1866 0 9.95215C0 15.5024 4.49761 19.9043 9.95215 19.9043C15.5024 19.9043 19.9043 15.4067 19.9043 9.95215C20 4.49761 15.5024 0 9.95215 0ZM7.94258 11.1005V9.95215C7.94258 9.37799 8.32536 8.99522 8.89952 8.99522C9.47368 8.99522 9.85646 9.37799 9.85646 9.95215V11.1005C9.85646 11.6746 9.47368 12.0574 8.89952 12.0574C8.32536 12.0574 7.94258 11.5789 7.94258 11.1005ZM13.6842 16.7464H13.5885C12.1531 17.1292 10.2392 16.4593 9.2823 15.311C8.99522 14.9282 8.99521 14.2584 9.47368 13.9713C9.85646 13.6842 10.5263 13.6842 10.8134 14.1627C11.2919 14.8325 12.5359 15.1196 13.11 14.9282C13.5885 14.8325 14.1627 15.1196 14.2584 15.5981C14.3541 16.0766 14.067 16.555 13.6842 16.7464ZM16.1722 11.1005C16.1722 11.6746 15.7895 12.0574 15.2153 12.0574C14.6411 12.0574 14.2584 11.6746 14.2584 11.1005V9.95215C14.2584 9.37799 14.6411 8.99522 15.2153 8.99522C15.7895 8.99522 16.1722 9.37799 16.1722 9.95215V11.1005Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Alumnos
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.1019 13.4021C9.38764 12.9897 8.77539 12.6804 8.0611 12.3711C7.75498 12.268 7.5509 12.0618 7.34682 11.7526C7.0407 11.134 6.73457 10.4124 6.32641 9.79381C5.91825 8.86597 4.59172 8.86597 4.08151 9.79381C3.77539 10.4124 3.46927 11.0309 3.16315 11.6495C3.0611 11.9588 2.85702 12.268 2.5509 12.3711C1.93866 12.6804 1.32641 12.9897 0.714166 13.299C-0.204201 13.8144 -0.204201 15.1546 0.714166 15.6701C1.32641 15.9794 1.93866 16.2887 2.5509 16.5979C2.85702 16.701 3.0611 17.0103 3.26519 17.3196C3.57131 18.0412 3.87743 18.6598 4.18355 19.2783C4.69376 20.2062 6.02029 20.2062 6.53049 19.2783C6.83662 18.6598 7.24478 18.0412 7.5509 17.3196C7.65294 17.0103 7.95906 16.701 8.26519 16.5979C8.97947 16.2887 9.59172 15.9794 10.306 15.6701C11.0203 15.1546 11.0203 13.9175 10.1019 13.4021Z"
+                    fill="#7B64B1"
+                  />
+                  <path
+                    d="M19.8977 8.76289C19.4896 3.91753 15.3059 0 10.4079 0C10.3059 0 10.2038 0 10.1018 0C8.06099 0 6.12221 0.103093 4.0814 0.206186C2.04058 0.309278 0.407929 1.95876 0.203847 4.02062C0.101807 5.15464 0.101807 7.2165 0.101807 8.24742C0.101807 8.86598 0.50997 9.27835 1.12221 9.27835C1.63242 9.27835 2.14262 8.86598 2.14262 8.24742C2.14262 7.2165 2.24466 5.15464 2.3467 4.12371C2.44875 3.09278 3.26507 2.16495 4.38752 2.16495C6.22426 2.16495 8.16303 2.06186 10.1018 2.06186H10.4079C10.51 2.06186 10.7141 2.06186 10.8161 2.06186C11.2243 2.78351 11.7345 3.71134 12.0406 4.63918C12.3467 5.56701 12.6528 6.70103 12.8569 7.52577C13.061 8.24742 13.6732 8.86598 14.4896 8.86598H17.959C17.959 9.17526 18.061 9.48454 18.061 9.79381C18.061 11.7526 18.061 13.8144 17.959 15.7732C17.8569 16.9072 17.0406 17.8351 15.9181 17.8351C14.6936 17.8351 12.4487 17.9381 11.2243 17.9381C10.7141 17.9381 10.2038 18.4536 10.2038 18.9691C10.2038 19.5876 10.7141 20 11.2243 20C12.5508 20 14.6936 20 16.0202 19.8969C18.163 19.7938 19.9998 18.0412 20.1018 15.8763C20.2038 13.8144 20.2038 11.7526 20.2038 9.79381C19.9998 9.38144 19.9998 9.07217 19.8977 8.76289Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Planeación
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-2 px-3 py-2 text-dark-purple font-semibold"
+            >
+              <span
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.6 9.54999C19.6 9.44999 19.6 9.44999 19.6 9.54999C19.6 8.54999 19.6 7.54999 19.5 6.34999C19.4 3.74999 17.3 1.64999 14.7 1.54999C14.5 1.54999 14.3 1.54999 14.2 1.54999V1.04999C14.2 0.449988 13.8 0.0499878 13.2 0.0499878C12.6 0.0499878 12.2 0.449988 12.2 1.04999V1.54999C11.5 1.54999 10.7 1.54999 10 1.54999C9.2 1.54999 8.4 1.54999 7.6 1.54999V1.04999C7.6 0.449988 7.2 0.0499878 6.6 0.0499878C6 0.0499878 5.6 0.449988 5.6 1.04999V1.64999C5.4 1.64999 5.3 1.64999 5.1 1.64999C2.4 1.74999 0.3 3.64999 0.2 6.24999C0.1 7.44999 0 8.54999 0 9.54999C0 9.54999 0 9.54999 0 9.64999C0 9.74999 0 9.74999 0 9.84999C0 11.55 0 13.25 0.2 15.25C0.4 17.75 2.4 19.75 4.9 19.85C5.7 19.85 6.6 19.95 7.4 19.95C7.7 19.95 8 19.95 8.2 19.95C8.7 19.95 9.3 19.95 9.8 19.95C10.3 19.95 10.8 19.95 11.4 19.95C11.7 19.95 12 19.95 12.2 19.95C13 19.95 13.8 19.95 14.6 19.85C17.2 19.75 19.2 17.65 19.3 15.05C19.6 12.95 19.6 11.35 19.6 9.54999ZM12.9 13.45L12.2 14.35C12.1 14.55 12 14.85 12 15.05V16.15C12 16.55 11.6 16.85 11.2 16.75L10.1 16.35C9.9 16.25 9.6 16.25 9.4 16.35L8.3 16.75C7.9 16.85 7.5 16.55 7.5 16.15V15.05C7.5 14.75 7.4 14.55 7.3 14.35L6.6 13.45C6.3 13.15 6.5 12.65 6.9 12.45L8 12.15C8.2 12.05 8.5 11.95 8.6 11.75L9.2 10.85C9.4 10.45 10 10.45 10.2 10.85L10.8 11.75C10.9 11.95 11.2 12.15 11.4 12.15L12.5 12.45C13 12.65 13.2 13.15 12.9 13.45ZM2.1 7.64999C2.1 7.24999 2.1 6.84999 2.2 6.44999C2.3 4.94999 3.6 3.74999 5.1 3.64999C5.2 3.64999 5.4 3.64999 5.5 3.64999V4.24999C5.5 4.84999 5.9 5.24999 6.5 5.24999C7.1 5.24999 7.5 4.84999 7.5 4.24999V3.54999C8.3 3.54999 9.1 3.54999 9.9 3.54999C10.6 3.54999 11.4 3.54999 12.1 3.54999V4.14999C12.1 4.74999 12.5 5.14999 13.1 5.14999C13.7 5.14999 14.1 4.74999 14.1 4.14999V3.64999C14.3 3.64999 14.4 3.64999 14.6 3.64999C16.2 3.74999 17.4 4.94999 17.5 6.54999C17.5 6.94999 17.5 7.34999 17.5 7.64999H2.1Z"
+                    fill="#7B64B1"
+                  />
+                </svg>
+              </span>
+              Calendario
+            </a>
+          </nav>
+        </div>
+        <div class="p-4">
+          <a href="#" class="text-purple-600 flex items-center gap-2">
+            <span
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.1961 19.717C11.6745 20.1887 17.8946 20.0943 18.7559 19.6226C19.8085 18.9623 19.9999 16.3208 19.9999 9.90566C19.9999 1.79245 20.0956 0.0943396 14.7367 0C11.2918 0 10.5262 0.188679 11.1004 1.13208C11.2918 1.50943 11.8659 1.50943 14.5453 1.60377C18.6602 1.69811 18.3731 3.01887 18.3731 9.81132C18.3731 17.0755 18.6602 18.3019 14.7367 18.3019C11.6745 18.3019 11.0047 18.3962 11.0047 19.1509C10.909 19.3396 11.1004 19.5283 11.1961 19.717Z"
+                  fill="#7B64B1"
+                />
+                <path
+                  d="M9.09091 11.4151C8.32536 11.6981 8.61244 12.4529 8.80383 13.2076C7.27273 12.4529 3.82775 10.8491 2.29665 10.0944C3.73206 9.24531 7.17703 7.5472 8.70813 6.79248C8.51675 7.45286 8.42105 8.0189 8.70813 8.30191C8.80383 8.49059 8.99522 8.58493 9.2823 8.58493C9.66507 8.58493 9.95215 8.30191 10.2392 7.73588C10.5263 7.16984 10.9091 5.75475 10.4306 5.09437C9.76077 4.24531 9.37799 4.43399 4.689 6.79248L3.54067 7.45286C1.05263 8.67927 0 9.15097 0 10C0 10.8491 1.05263 11.3208 3.54067 12.5472L4.689 13.2076C7.84689 14.8113 8.99522 15.283 9.56938 15.283C9.85646 15.283 9.95215 15.1887 10.1435 15C10.8134 14.434 10.4306 12.7359 10.0478 11.9812C9.76077 11.2264 9.1866 11.3208 9.09091 11.4151Z"
+                  fill="#5280E4"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.1626 6.2264C13.4928 5.7547 13.11 5.7547 12.6315 6.41508C12.0574 7.26414 11.3875 7.45282 10.1435 7.35848C8.51668 7.1698 8.03821 8.30187 9.37793 8.96225C11.6746 10.1887 16.0765 7.54715 14.1626 6.2264Z"
+                  fill="#5280E4"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.1196 10.849C14.8325 10.3773 14.6411 10.3773 14.067 10.7547C13.3971 11.2264 12.9186 11.2264 12.1531 10.9434C11.1962 10.4717 10.4306 11.2264 11.1005 11.9811C12.1531 13.1132 15.8851 12.1698 15.1196 10.849Z"
+                  fill="#7B64B1"
+                />
+              </svg>
+            </span>
+            Cerrar sesión
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6">
+        <!-- Header -->
+        <div
+          class="bg-[url(img/bg-top.png)] bg-no-repeat bg-cover bg-center rounded-xl px-12 pb-8 pt-6 relative"
+        >
+          <div class="absolute inset-0 bg-purple-200/60 rounded-xl"></div>
+          <div class="flex justify-between relative">
+            <h2 class="pb-4 text-xl font-bold text-dark-blue">
+              Hola, Evelyn J. Cabrales!
+            </h2>
+            <img src="img/image3.png" class="rounded-full" />
+          </div>
+          <div class="relative">
+            <p class="text-lg text-gray-600 font-bold">Benito Juarez</p>
+            <ul class="text-sm text-gray-600">
+              <li>
+                CCT: <span class="text-gray-600 font-bold">28DJN0019K</span>
+              </li>
+              <li>ZONA: <span class="text-gray-600 font-bold">39</span></li>
+              <li>
+                DIR: <span class="text-gray-600 font-bold">Algún lugar</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-row-reverse relative">
+            <span class="text-dark-purple font-bold mx-2">Editar</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_363_2620)">
+                <path
+                  d="M13.7647 18H4.12941C1.90588 18 0 16.0941 0 13.8706V4.12941C0 1.90588 1.90588 0 4.12941 0H8.25882C8.89412 0 9.31765 0.423529 9.31765 1.05882C9.31765 1.69412 8.89412 2.11765 8.25882 2.11765H4.12941C3.07059 2.11765 2.11765 3.07059 2.11765 4.12941V13.7647C2.11765 14.9294 3.07059 15.8824 4.12941 15.8824H13.7647C14.9294 15.8824 15.7765 14.9294 15.7765 13.8706V9C15.7765 8.36471 16.2 7.94118 16.8353 7.94118C17.4706 7.94118 17.8941 8.36471 17.8941 9V13.8706C18 16.0941 16.0941 18 13.7647 18Z"
+                  fill="#7B64B1"
+                />
+                <path
+                  d="M16.8353 1.58823L15.6706 0.529409C14.7176 -0.211768 13.447 -0.211768 12.6 0.635291L4.34117 8.89411C3.91764 9.31764 3.70587 9.95294 3.70587 10.4823V12.2824C3.70587 13.0235 4.34117 13.6588 5.08234 13.6588H7.30587C7.94117 13.6588 8.47058 13.4471 8.89411 13.0235L16.9412 4.87058C17.3647 4.44706 17.5765 3.81176 17.5765 3.17647C17.5765 2.54117 17.2588 2.01176 16.8353 1.58823ZM14.1882 2.11764L15.3529 3.17647V3.28235V3.38823L14.8235 3.91764L13.447 2.64706L13.9765 2.11764C14.0823 2.11764 14.1882 2.11764 14.1882 2.11764ZM7.41175 11.5412H7.30587H5.82352V10.4823V10.3765L11.9647 4.12941L13.3412 5.4L7.41175 11.5412Z"
+                  fill="#5280E4"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_363_2620">
+                  <rect width="18" height="18" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="mt-6 rounded-xl bg-white">
+          <!-- Header con imagen de fondo y overlay -->
+          <div
+            class="relative h-32 bg-[url('img/bg-top.png')] bg-cover bg-center rounded-t-xl"
+          >
+            <!-- Overlay oscuro -->
+            <div class="absolute inset-0 bg-purple-200/60 rounded-t-xl"></div>
+
+            <!-- Texto del header -->
+            <div class="absolute inset-0 flex justify-left">
+              <h3 class="text-xl font-bold text-gray-400 text-center m-6">
+                ¡Bienvenido(a), Evelyn J. Cabrales!
+              </h3>
+            </div>
+          </div>
+
+          <!-- Imagen de perfil superpuesta -->
+          <div class="flex justify-center -mt-12 relative">
+            <img
+              src="img/image3.png"
+              alt="Foto de perfil"
+              class="w-24 h-24 rounded-full shadow-md"
+            />
+          </div>
+
+          <div id="profileContainer">
+            <!-- Este bloque se reemplazará por el formulario al hacer clic en "Actualizar información" -->
+
+            <!-- CONTENIDO INICIAL (SOLO LECTURA) -->
+            <div
+              id="profileView"
+              class="px-6 py-6 bg-white text-center space-y-4"
+            >
+              <div class="px-16 max-w-xl mx-auto">
+                <div
+                  class="grid grid-cols-3 text-center rounded-lg shadow-sm overflow-hidden"
+                >
+                  <!-- Grupo -->
+                  <div class="py-4">
+                    <p class="text-sm text-gray-500">Grupo</p>
+                    <p class="text-lg font-medium text-gray-800">2B</p>
+                  </div>
+
+                  <!-- Niños -->
+                  <div class="py-4">
+                    <p class="text-sm text-gray-500">Niños</p>
+                    <p class="text-lg font-medium text-gray-800">14</p>
+                  </div>
+
+                  <!-- Niñas -->
+                  <div class="py-4">
+                    <p class="text-sm text-gray-500">Niñas</p>
+                    <p class="text-lg font-medium text-gray-800">17</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contenido del perfil -->
+              <div class="px-6 py-6 bg-white text-center space-y-4">
+                <!-- Nombre -->
+                <div>
+                  <p class="text-lg font-semibold text-gray-800">
+                    Evelyn J. Cabrales
+                  </p>
+                  <p class="text-sm text-gray-500">Educación</p>
+                </div>
+
+                <!-- Escuela -->
+                <div>
+                  <p class="text-lg font-semibold text-gray-800">
+                    Benito Juárez
+                  </p>
+                  <p class="text-sm text-gray-500">Profesora - Preescolar</p>
+                </div>
+
+                <!-- Correo -->
+                <div>
+                  <p class="text-lg font-semibold text-gray-800">
+                    evelyn.ejemplo@gmail.com
+                  </p>
+                  <p class="text-sm text-gray-500">Correo electrónico</p>
+                </div>
+
+                <button
+                  id="updateProfileBtn"
+                  class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
+                >
+                  Actualizar información
+                </button>
+                <a
+                  href="#"
+                  id="openModalBtn"
+                  class="text-dark-purple block font-semibold underline underline-offset-2"
+                  >Cambiar contraseña</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            id="passwordModal"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden"
+          >
+            <div
+              class="bg-white rounded-xl shadow-xl w-full max-w-md mx-4 p-6 relative"
+            >
+              <!-- Título -->
+              <h2 class="text-xl font-bold text-center text-dark-purple mb-6">
+                Cambiar contraseña
+              </h2>
+
+              <!-- Inputs -->
+              <form class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-blue mb-1"
+                    >Contraseña actual</label
+                  >
+                  <div class="eduplanner-password-container">
+                    <input
+                      id="current-password"
+                      type="password"
+                      class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500 toggle-password"
+                      data-target="current-password"
+                    >
+                      <!-- Ojo cerrado (oculto) -->
+                      <i class="fa-solid fa-eye icon-eye-open hidden"></i>
+                      <!-- Ojo abierto (visible) -->
+                      <i class="fa-solid fa-eye-slash icon-eye-closed"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-blue mb-1"
+                    >Nueva contraseña</label
+                  >
+                  <div class="eduplanner-password-container">
+                    <input
+                      id="new-password"
+                      type="password"
+                      class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500 toggle-password"
+                      data-target="new-password"
+                    >
+                      <!-- Ojo cerrado (oculto) -->
+                      <i class="fa-solid fa-eye icon-eye-open hidden"></i>
+                      <!-- Ojo abierto (visible) -->
+                      <i class="fa-solid fa-eye-slash icon-eye-closed"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-blue mb-1"
+                    >Confirmar contraseña</label
+                  >
+                  <div class="eduplanner-password-container">
+                    <input
+                      id="confirm-password"
+                      type="password"
+                      class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 end-0 flex items-center z-20 px-3 cursor-pointer text-gray-400 rounded-e-md focus:outline-hidden focus:text-blue-600 dark:text-neutral-600 dark:focus:text-blue-500 toggle-password"
+                      data-target="confirm-password"
+                    >
+                      <!-- Ojo cerrado (oculto) -->
+                      <i class="fa-solid fa-eye icon-eye-open hidden"></i>
+                      <!-- Ojo abierto (visible) -->
+                      <i class="fa-solid fa-eye-slash icon-eye-closed"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="flex justify-center space-x-4 mt-6">
+                  <button
+                    type="button"
+                    id="cancelModalBtn"
+                    class="px-4 py-2 rounded-full bg-white text-blue border border-blue-300 hover:bg-gray-100"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="submit"
+                    class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
+                  >
+                    Guardar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <template id="profileFormTemplate">
+            <!-- FORMULARIO EDITABLE -->
+            <form id="profileForm" class="px-6 py-6 bg-white space-y-4">
+              <div class="max-w-xl mx-auto">
+                <div
+                  class="grid grid-cols-3 text-center rounded-lg shadow-sm overflow-hidden"
+                >
+                  <!-- Grupo -->
+                  <div class="py-4 mx-3">
+                    <p class="text-sm text-blue font-semibold">Grupo</p>
+                    <input
+                      type="text"
+                      value="2B"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+
+                  <!-- Niños -->
+                  <div class="py-4 mx-3">
+                    <p class="text-sm text-blue font-semibold">Niños</p>
+                    <input
+                      type="number"
+                      value="14"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+
+                  <!-- Niñas -->
+                  <div class="py-4 mx-3">
+                    <p class="text-sm text-blue font-semibold">Niñas</p>
+                    <input
+                      type="number"
+                      value="17"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-x-6 max-w-xl mx-auto">
+                <!-- Columna izquierda -->
+                <div class="space-y-4">
+                  <!-- Nombre -->
+                  <div>
+                    <label class="block text-sm font-medium text-blue"
+                      >Nombre completo</label
+                    >
+                    <input
+                      type="text"
+                      value="Evelyn J. Cabrales"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+
+                  <!-- Profesión -->
+                  <div>
+                    <label class="block text-sm font-medium text-blue"
+                      >Profesión</label
+                    >
+                    <input
+                      type="text"
+                      value="Educación"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+
+                  <!-- Escuela -->
+                  <div>
+                    <label class="block text-sm font-medium text-blue"
+                      >Escuela</label
+                    >
+                    <select
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+                      <option>Benito Juárez</option>
+                      <option>Justo Sierra</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="space-y-4">
+                  <!-- Puesto -->
+                  <div>
+                    <label class="block text-sm font-medium text-blue"
+                      >Puesto</label
+                    >
+                    <input
+                      type="text"
+                      value="Profesora - Preescolar"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+
+                  <!-- Correo -->
+                  <div>
+                    <label class="block text-sm font-medium text-blue"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      value="evelyn.ejemplo@gmail.com"
+                      class="mt-1 w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Botones -->
+              <div class="flex justify-center space-x-4 pt-4">
+                <button
+                  type="button"
+                  id="cancelEditBtn"
+                  class="px-4 py-2 rounded-full bg-gray-200 text-blue hover:bg-gray-300"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
+                >
+                  Guardar
+                </button>
+              </div>
+            </form>
+          </template>
+        </div>
+      </main>
+    </div>
+    <script src="js/scriptPerfil.js"></script>
+  </body>
+</html>
