@@ -147,18 +147,22 @@
     </div>
     <div class="flex min-h-screen">
       <!-- Sidebar -->
-      <aside
+      <aside id="sidebar"
         class="w-64 bg-pale-yellow shadow-lg flex flex-col justify-between m-6 px-2 rounded-xl"
       >
-        <div>
-          <div class="text-center p-6">
-            <img
-              src="img/edu-planner-logo.png"
-              alt="EduPlanner logo"
-              class="h-12"
-            />
+        <div class="relative">
+          <div class="flex items-center justify-center h-16">
+            <img id="sidebarLogo" src="img/edu-planner-logo.png" alt="EduPlanner logo" class="h-12" />
           </div>
-          <nav class="p-4 space-y-4 mt-6">
+          <button 
+      id="toggleBtn" 
+      class="absolute -right-6 transform -translate-y-1/2 bg-pale-yellow p-2 rounded-xl hover:bg-gray-200 transition"
+    >
+            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.533846 9.27785L6.87197 15.4806C7.21523 15.8074 7.67618 15.9889 8.15509 15.9857C8.63401 15.9825 9.09238 15.7949 9.43103 15.4634C9.76968 15.132 9.96138 14.6834 9.96466 14.2148C9.96794 13.7461 9.78253 13.295 9.44855 12.959L4.39872 8.01746L9.44855 3.07548C9.62156 2.91075 9.75939 2.71402 9.85405 2.49672C9.94871 2.27942 9.99831 2.04587 9.99996 1.80965C10.0016 1.57343 9.95529 1.33925 9.86368 1.1207C9.77207 0.902145 9.63701 0.703585 9.46632 0.53655C9.29564 0.369513 9.09275 0.23733 8.86943 0.147678C8.64611 0.0580271 8.40681 0.0126942 8.16543 0.0143126C7.92406 0.01593 7.68542 0.0644663 7.46337 0.157102C7.24133 0.249739 7.0403 0.384629 6.87197 0.553937L0.533847 6.75668C0.364606 6.92218 0.230347 7.11869 0.138748 7.33499C0.0471475 7.55128 -2.36581e-07 7.78313 -2.5705e-07 8.01726C-2.77519e-07 8.2514 0.0471475 8.48324 0.138748 8.69954C0.230347 8.91584 0.364606 9.11235 0.533846 9.27785Z" fill="#7B64B1"/>
+              </svg>              
+          </button>
+          <nav class="space-y-4 mt-6">
             <a
               href="app.html"
               class="flex items-center gap-2 text-dark-purple font-semibold rounded-lg px-3 py-2"
@@ -177,7 +181,7 @@
                   />
                 </svg>
               </span>
-              Inicio
+              <span class="nav-expand">Inicio</span>
             </a>
             <a
               href="perfil.html"
@@ -201,7 +205,8 @@
                   />
                 </svg>
               </span>
-              Perfil
+              
+              <span class="nav-expand">Perfil</span>
             </a>
             <a
               href="escuelas.html"
@@ -229,7 +234,8 @@
                   />
                 </svg>
               </span>
-              Escuelas
+              
+              <span class="nav-expand">Escuelas</span>
             </a>
             <a
               href="alumnos.html"
@@ -253,7 +259,7 @@
                   />
                 </svg>
               </span>
-              Alumnos
+              <span class="nav-expand">Alumnos</span>
             </a>
             <a
               href="planeacion.html"
@@ -277,7 +283,7 @@
                   />
                 </svg>
               </span>
-              Planeación
+              <span class="nav-expand">Planeación</span>
             </a>
             <a
               href="#"
@@ -297,7 +303,7 @@
                   />
                 </svg>
               </span>
-              Calendario
+              <span class="nav-expand">Calendario</span>
             </a>
           </nav>
         </div>
@@ -335,7 +341,7 @@
                 />
               </svg>
             </span>
-            Cerrar sesión
+            <span class="nav-expand">Cerrar sesión</span>
           </a>
         </div>
       </aside>
@@ -546,7 +552,7 @@
                   <div class="relative inline-block space-x-2">
                     <a
                       href="#"
-                      id=""
+                      id="openModalBtn"
                       class="text-dark-purple font-bold text-sm inline-flex items-center mr-4"
                     >
                       <svg
@@ -719,6 +725,51 @@ Un tema con relevancia, entendido como una necesidad, problema, aspecto a mejora
                     </button>
                   </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+          <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-2xl shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
+            <!-- Botón cerrar -->
+            <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">
+              ×
+            </button>
+        
+            <!-- Contenido del modal -->
+            <h2 class="text-lg font-bold mb-4 text-center">Modalidad de trabajo</h2>
+            
+            <div class="space-y-6">
+              <!-- Bloque 1 -->
+              <div>
+                <h3 class="text-lg font-semibold text-blue mb-2">Situación inicial</h3>
+                <p class="text-gray-600">
+                  Se sugiere que plantee acciones didácticas, pertinentes, variadas, creativas, innovadoras, disruptivas y originales para presentar. Un tema con relevancia, entendido como una necesidad, problema, aspecto a mejorar, motivo de interés o de reflexión, situación cotidiana o acontecimiento, el cual será el hilo conductor de la experiencia y podrá ser abordado mediante algún procedieminto o la creación de un producto.Una propuesta de elaboiración de una producción (Proceso, objeto o actividad), considerando la reflexión sobre cómo esta se relaciona con la vida y realidad de las niñas y los niños; por ejemplo, ante la posibilidad de participar en un taller de poeía, convendría identificar la presencia de ésta en las prácticas culturales de su territorio, para tener la claridad con respecto a la meta hacia la que dirigirán sus esfuerzos, como crear poemas para una festividad comunitaria. Mediante acciones de enseñanza, se recomienda que indague qué saben las niñas y los niños sobre los contenidos curriculares ligados a esta experiencia, y explore lo que conocen y desconocen, así como lo que quieren y lo que necesitan saber para desarrollar el taller.
+                </p>
+              </div>
+        
+              <!-- Bloque 2 -->
+              <div>
+                <h3 class="text-lg font-semibold text-blue mb-2">Organización de las acciones</h3>
+                <p class="text-gray-600">
+                  Texto de ejemplo para la organización de las acciones. Aquí irían los pasos o actividades planeadas.
+                </p>
+              </div>
+        
+              <!-- Bloque 3 -->
+              <div>
+                <h3 class="text-lg font-semibold text-blue mb-2">Puesta en marcha</h3>
+                <p class="text-gray-600">
+                  Texto de ejemplo para la puesta en marcha. Aquí describes cómo se implementarán las acciones.
+                </p>
+              </div>
+        
+              <!-- Bloque 4 -->
+              <div>
+                <h3 class="text-lg font-semibold text-blue mb-2">Valoremos lo aprendido</h3>
+                <p class="text-gray-600">
+                  Texto de ejemplo para valorar lo aprendido. Aquí se detallan las reflexiones y aprendizajes obtenidos.
+                </p>
               </div>
             </div>
           </div>
