@@ -58,7 +58,7 @@
       <div
         class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4"
       >
-        <!-- Logo alineado a la izquierda -->
+        <!-- Logo -->
         <div class="flex items-center gap-2">
           <a href="#hero">
             <img
@@ -69,10 +69,9 @@
           </a>
         </div>
 
-        <!-- Menú + Botón agrupados a la derecha -->
-        <div class="flex items-center gap-6">
-          <!-- Menu -->
-          <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <!-- Desktop menu + Login -->
+        <div class="hidden md:flex items-center gap-6">
+          <nav class="flex gap-6 text-sm font-medium">
             <a href="#beneficios" class="text-gray-700 hover:text-purple-600"
               >Beneficios</a
             >
@@ -86,8 +85,6 @@
               >Contacto</a
             >
           </nav>
-
-          <!-- Botón login -->
           <a
             href="login.html"
             class="px-4 py-2 rounded bg-[#9A89C3] hover:bg-purple-400 text-white text-sm"
@@ -95,6 +92,41 @@
             Iniciar sesión
           </a>
         </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden flex flex-col gap-1.5 p-2 rounded hover:bg-gray-200"
+        >
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+          <span class="block w-6 h-0.5 bg-gray-700"></span>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden flex flex-col gap-4 px-6 py-4 bg-[#FDFCF9] shadow-md"
+      >
+        <a href="#beneficios" class="block text-gray-700 hover:text-purple-600"
+          >Beneficios</a
+        >
+        <a href="#precios" class="block text-gray-700 hover:text-purple-600"
+          >Precios</a
+        >
+        <a href="#testimonios" class="block text-gray-700 hover:text-purple-600"
+          >Testimonios</a
+        >
+        <a href="#contacto" class="block text-gray-700 hover:text-purple-600"
+          >Contacto</a
+        >
+        <a
+          href="login.html"
+          class="block text-center px-4 py-2 rounded bg-[#9A89C3] hover:bg-purple-400 text-white text-sm"
+        >
+          Iniciar sesión
+        </a>
       </div>
     </header>
 
@@ -1515,6 +1547,13 @@
       window.addEventListener("resize", () => {
         scrollAmount = 0;
         carousel.scrollTo({ left: 0 });
+      });
+
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
     <script src="js/countdown.js"></script>
