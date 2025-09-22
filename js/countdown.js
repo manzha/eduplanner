@@ -1,6 +1,6 @@
 const FULL_DASH = 2 * Math.PI * 40; // circunferencia del círculo (r=40)
 
-const targetDate = new Date("September 20, 2025 08:00:00").getTime();
+const targetDate = new Date("September 30, 2025 08:00:00").getTime();
 
 const updateCountdown = () => {
   const now = new Date().getTime();
