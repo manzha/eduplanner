@@ -412,7 +412,7 @@
                 </h3>
                 <div class="relative inline-block space-x-2">
                   <a
-                    href="#"
+                    href="planeaciones-anteriores.html"
                     id="addGroupBtn"
                     class="text-dark-purple font-bold text-sm inline-flex items-center mr-4"
                   >
@@ -468,8 +468,12 @@
                   <label class="block text-blue font-semibold mb-1"
                     >Campos formativos</label
                   >
-                  <select class="w-full border rounded-lg p-2 text-gray-700">
-                    <option>Lenguajes</option>
+                  <select id="campoFormativoSelect" class="w-full border rounded-lg p-2 text-gray-700">
+                    <option selected>Seleccionar campo formativo</option>
+                    <option value="lenguajes">Lenguajes</option>
+                    <option value="ciencia">Saberes y pensamiento científico</option>
+                    <option value="comunitario">De lo humano y comunitario</option>
+                    <option value="etica">Ética, naturaleza y sociedades</option>
                   </select>
                 </div>
 
@@ -607,7 +611,7 @@
                     <div class="accordion-content hidden p-3 text-gray-600">
                       <p>
                         Se sugiere que plantee acciones didácticas, pertinentes, variadas, creativas, innovadoras, disruptivas y originales para presentar. 
-Un tema con relevancia, entendido como una necesidad, problema, aspecto a mejorar, motivo de interés o de reflexión, situación cotidiana o acontecimiento, el cual será el hilo conductor de la experiencia y podrá ser abordado mediante algún procedieminto o la creación de un producto.Una propuesta de elaboiración de una producción (Proceso, objeto o actividad), considerando la reflexión sobre cómo esta se relaciona con la vida y realidad de las niñas y los niños; por ejemplo, ante la posibilidad de participar en un taller de poeía, convendría identificar la presencia de ésta en las prácticas culturales de su territorio, para tener la claridad con respecto a la meta hacia la que dirigirán sus esfuerzos, como crear poemas para una festividad comunitaria. Mediante acciones de enseñanza, se recomienda que indague qué saben las niñas y los niños sobre los contenidos curriculares ligados a esta experiencia, y explore lo que conocen y desconocen, así como lo que quieren y lo que necesitan saber para desarrollar el taller.
+                    Un tema con relevancia, entendido como una necesidad, problema, aspecto a mejorar, motivo de interés o de reflexión, situación cotidiana o acontecimiento, el cual será el hilo conductor de la experiencia y podrá ser abordado mediante algún procedieminto o la creación de un producto.Una propuesta de elaboiración de una producción (Proceso, objeto o actividad), considerando la reflexión sobre cómo esta se relaciona con la vida y realidad de las niñas y los niños; por ejemplo, ante la posibilidad de participar en un taller de poeía, convendría identificar la presencia de ésta en las prácticas culturales de su territorio, para tener la claridad con respecto a la meta hacia la que dirigirán sus esfuerzos, como crear poemas para una festividad comunitaria. Mediante acciones de enseñanza, se recomienda que indague qué saben las niñas y los niños sobre los contenidos curriculares ligados a esta experiencia, y explore lo que conocen y desconocen, así como lo que quieren y lo que necesitan saber para desarrollar el taller.
                       </p>
                     </div>
                   </div>
@@ -773,6 +777,321 @@ Un tema con relevancia, entendido como una necesidad, problema, aspecto a mejora
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Modal -->
+        <div 
+        id="lenguajesModal" 
+        class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+        >
+        <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-2xl shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
+          <!-- Header -->
+          <!-- Botón cerrar -->
+          <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-2xl font-bold">
+            ×
+          </button>
+      
+          <!-- Contenido del modal -->
+          <h2 class="text-lg font-bold mb-4 text-center">Proceso de Desarrollo de Aprendizaje (PDA)</h2>
+
+          <!-- Body (acordeón aquí después) -->
+          <div class="p-4 space-y-4">
+            <div class="p-4 bg-white rounded-2xl shadow-md space-y-2">
+              <!-- Accordion Item -->
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 accordion-btn text-dark-blue font-bold text-md"
+                >
+                Comunicación oral de necesidades, emociones, gustos, ideas y saberes a través de los diversos lenguajes, desde una perspectiva comunitaria. 
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Cuadro 1 -->
+                    <div class="border rounded-lg overflow-hidden">
+                      <div class="bg-[#E5DFF5] text-center font-bold py-2">1°</div>
+                      <div class="bg-white p-4 space-y-2">
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Emplea palabras, gestos, señas, imágenes, sonidos o movimientos corporales que aprende en su comunidad, para expresar necesidades, ideas, emociones y gustos que reflejan su forma de interpretar y actuar en el mundo.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Reconoce que cuando juega y socializa con sus pares, se expresan desde sus posibilidades, vivencias y cultura.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Espera su turno al participar en una conversación con sus compañeras o compañeros.</span>
+                        </label>
+                      </div>
+                    </div>
+                
+                    <!-- Cuadro 2 -->
+                    <div class="border rounded-lg overflow-hidden">
+                      <div class="bg-[#E5DFF5] text-center font-bold py-2">2°</div>
+                      <div class="bg-white p-4 space-y-2">
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Manifiesta oralmente y de manera clara necesidades, emociones, gustos, preferencias e ideas, que construye en la convivencia diaria, y se da a entender apoyándose de distintos lenguajes.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Escucha con atención a sus pares y espera su turno para hablar.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Se interesa por lo que otras personas expresan, sienten y saben e intercambia sus puntos de vista.</span>
+                        </label>
+                      </div>
+                    </div>
+                
+                    <!-- Cuadro 3 -->
+                    <div class="border rounded-lg overflow-hidden">
+                      <div class="bg-[#E5DFF5] text-center font-bold py-2">3°</div>
+                      <div class="bg-white p-4 space-y-2">
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>De manera oral, expresa ideas completas sobre necesidades, vivencias, emociones, gustos, preferencias y saberes a distintas personas, combinando los lenguajes.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Comprende, al interactuar con las demás personas, que existen diversas formas de comunicarse.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                          <input type="checkbox" class="form-checkbox text-purple-600">
+                          <span>Conversa y opina sobre diferentes temas y con varias personas interlocutoras.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-start  items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                <span class="text-left">Narración de historias mediante diversos lenguajes, en un ambiente donde niñas y niños participen y se apropien de la cultura, a través de diferentes textos.</span>
+                  <span class="accordion-icon ml-auto"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-start  items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                <span class="text-left">Recursos y juegos del lenguaje que fortalecen la diversidad de formas de expresión oral, y que rescatan la o las lenguas de la comunidad y de otros lugares.</span>
+                  <span class="accordion-icon ml-auto"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Reconocimiento y aprecio de la diversidad linguistica, al identificar las formas en que se comunican las distintas personas de la comunidad.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Representación gráfica de ideas y descubrimientos, al explorar los diversos textos que hay en su comunidad y otros lugares.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Expresión de emociones y experiencias, en igualdad de oportunidades, apoyándose de recursos gráficos personales y de los lenguajes artísticos.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Producciones gráficas dirigidas a diversas destinatarias y diversos destinatarios, para establecer vínculos sociales y acercarse a la cultural escrita.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Reconocimiento de ideas o emociones en la interacción con manifestaciones culturales y artísticas y con la naturaleza, a través de diversos lenguajes.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+
+              <div class="rounded-lg">
+                <button
+                  class="w-full flex justify-between items-center pb-3 text-dark-blue font-bold text-md accordion-btn"
+                >
+                Produccion de expresiones creativas con los distintos elementos de los lenguajes artísticos.
+                  <span class="accordion-icon"
+                    ><svg
+                      width="16"
+                      height="10"
+                      viewBox="0 0 16 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27748 9.46615L15.4802 3.12803C15.8071 2.78477 15.9885 2.32382 15.9853 1.84491C15.9821 1.36599 15.7945 0.907625 15.4631 0.568973C15.1317 0.230322 14.6831 0.0386185 14.2144 0.0353384C13.7457 0.0320583 13.2946 0.217465 12.9587 0.551446L8.01709 5.60128L3.07512 0.551446C2.91039 0.378442 2.71365 0.240608 2.49635 0.14595C2.27905 0.0512914 2.04551 0.00169531 1.80929 4.21186e-05C1.57307 -0.00161107 1.33888 0.0447116 1.12033 0.13632C0.901779 0.227928 0.703218 0.362995 0.536183 0.533677C0.369147 0.704359 0.236964 0.907253 0.147312 1.13057C0.057661 1.3539 0.0123281 1.59319 0.0139465 1.83457C0.0155639 2.07594 0.0641002 2.31458 0.156736 2.53663C0.249373 2.75867 0.384263 2.9597 0.553571 3.12803L6.75632 9.46615C6.92181 9.63539 7.11832 9.76965 7.33462 9.86125C7.55092 9.95285 7.78276 10 8.0169 10C8.25104 10 8.48288 9.95285 8.69918 9.86125C8.91547 9.76965 9.11199 9.63539 9.27748 9.46615Z"
+                        fill="#7B64B1"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="accordion-content hidden p-3 text-gray-600">
+                  <p>Texto de ejemplo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="flex justify-end border-t p-4">
+            <button 
+              id="closeModalBtn2PDA" 
+              class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
         </div>
       </main>
     </div>

@@ -19,6 +19,13 @@
   const openBtn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModalBtn");
   const modal = document.getElementById("myModal");
+  const select = document.getElementById("campoFormativoSelect");
+  const modalPDA = document.getElementById("lenguajesModal");
+
+  const closeModalBtns = [
+    document.getElementById("closeModalBtnPDA"),
+    document.getElementById("closeModalBtn2PDA")
+  ];
 
   openBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -29,6 +36,21 @@
   closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
+  });
+
+  select.addEventListener("change", (e) => {
+    if (e.target.value === "lenguajes") {
+      modalPDA.classList.remove("hidden");
+      modalPDA.classList.add("flex");
+    }
+  });
+
+  closeModalBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      modalPDA.classList.add("hidden");
+      modalPDA.classList.remove("flex");
+      select.value = "Seleccionar campo formativo"; // Reset al cerrar
+    });
   });
 
   // Cerrar si das click fuera del modal
