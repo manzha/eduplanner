@@ -6,6 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
+      id="wpo_min-header-0-css"
       href="css/styles.css"
       media="all"
     />
@@ -146,25 +147,21 @@
     </div>
     <div class="flex min-h-screen">
       <!-- Sidebar -->
-      <aside id="sidebar"
+      <aside
         class="w-64 bg-pale-yellow shadow-lg flex flex-col justify-between m-6 px-2 rounded-xl"
       >
-      <div class="relative">
-        <div class="flex items-center justify-center h-16">
-          <img id="sidebarLogo" src="img/edu-planner-logo.png" alt="EduPlanner logo" class="h-12" />
-        </div>
-        <button 
-    id="toggleBtn" 
-    class="absolute -right-6 transform -translate-y-1/2 bg-pale-yellow p-2 rounded-xl hover:bg-gray-200 transition"
-  >
-          <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.533846 9.27785L6.87197 15.4806C7.21523 15.8074 7.67618 15.9889 8.15509 15.9857C8.63401 15.9825 9.09238 15.7949 9.43103 15.4634C9.76968 15.132 9.96138 14.6834 9.96466 14.2148C9.96794 13.7461 9.78253 13.295 9.44855 12.959L4.39872 8.01746L9.44855 3.07548C9.62156 2.91075 9.75939 2.71402 9.85405 2.49672C9.94871 2.27942 9.99831 2.04587 9.99996 1.80965C10.0016 1.57343 9.95529 1.33925 9.86368 1.1207C9.77207 0.902145 9.63701 0.703585 9.46632 0.53655C9.29564 0.369513 9.09275 0.23733 8.86943 0.147678C8.64611 0.0580271 8.40681 0.0126942 8.16543 0.0143126C7.92406 0.01593 7.68542 0.0644663 7.46337 0.157102C7.24133 0.249739 7.0403 0.384629 6.87197 0.553937L0.533847 6.75668C0.364606 6.92218 0.230347 7.11869 0.138748 7.33499C0.0471475 7.55128 -2.36581e-07 7.78313 -2.5705e-07 8.01726C-2.77519e-07 8.2514 0.0471475 8.48324 0.138748 8.69954C0.230347 8.91584 0.364606 9.11235 0.533846 9.27785Z" fill="#7B64B1"/>
-            </svg>              
-        </button>
-          <nav class="space-y-4 mt-6">
+        <div>
+          <div class="text-center p-6">
+            <img
+              src="img/edu-planner-logo.png"
+              alt="EduPlanner logo"
+              class="h-12"
+            />
+          </div>
+          <nav class="p-4 space-y-4 mt-6">
             <a
               href="app.html"
-              class="flex items-center gap-2 text-dark-purple font-semibold bg-light-purple rounded-lg px-3 py-2"
+              class="flex items-center gap-2 text-dark-purple font-semibold rounded-lg px-3 py-2"
             >
               <span
                 ><svg
@@ -180,7 +177,7 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Inicio</span>
+              Inicio
             </a>
             <a
               href="perfil.html"
@@ -204,7 +201,7 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Perfil</span>
+              Perfil
             </a>
             <a
               href="escuelas.html"
@@ -232,7 +229,7 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Escuelas</span>
+              Escuelas
             </a>
             <a
               href="alumnos.html"
@@ -256,7 +253,7 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Alumnos</span>
+              Alumnos
             </a>
             <a
               href="planeacion.html"
@@ -280,7 +277,7 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Planeación</span>
+              Planeación
             </a>
             <a
               href="#"
@@ -300,10 +297,10 @@
                   />
                 </svg>
               </span>
-              <span class="nav-expand">Calendario</span>
+              Calendario
             </a>
             <div class="w-full">
-              <div class="w-full flex items-center justify-between px-3 py-2 hover:bg-gray-100 rounded-full">
+              <div class="w-full flex items-center justify-between px-3 py-2 hover:bg-gray-100 bg-light-purple rounded-full">
                 <div class="flex items-center gap-2">
                   <!-- Ícono principal -->
                   <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,30 +341,37 @@
           <a href="#" class="text-purple-600 flex items-center gap-2">
             <span
               ><svg
-                width="18"
-                height="18"
-                viewBox="0 0 18 18"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_450_1145)">
-                  <path
-                    d="M11.43 8.99996C11.43 8.17343 10.8 7.62241 10.08 7.62241H9.45H5.94C5.94 6.97955 5.85 6.42853 5.76 5.78567C5.67 5.32649 5.4 4.95914 4.95 4.77547C4.59 4.5918 4.05 4.5918 3.69 4.86731C2.34 5.602 1.17 6.70404 0.27 8.17343C0.09 8.44894 0 8.72445 0 8.99996C0 9.27547 0.09 9.55098 0.27 9.82649C1.17 11.1122 2.25 12.2142 3.6 13.0408C3.96 13.3163 4.5 13.3163 4.95 13.1326C5.4 12.9489 5.67 12.5816 5.76 12.0306C5.85 11.4796 5.94 10.8367 5.94 10.2857H9.45H10.08C10.8 10.3775 11.43 9.73465 11.43 8.99996Z"
-                    fill="#7B64B1"
-                  />
-                  <path
-                    d="M17.9102 4.40816C17.8202 2.02041 15.9302 0.183673 13.5902 0.0918367C12.2402 0 11.7002 0 10.3502 0C9.8102 0 9.4502 0.459184 9.4502 0.918367C9.4502 2.47959 9.4502 4.13265 9.4502 5.69388H10.0802C11.8802 5.69388 13.2302 7.16327 13.2302 8.90816C13.2302 10.7449 11.7902 12.1224 10.0802 12.1224H9.5402C9.5402 13.6837 9.6302 15.3367 9.6302 16.898C9.6302 17.449 9.9902 17.8163 10.5302 17.8163C11.8802 17.8163 12.3302 17.7245 13.6802 17.6327C16.0202 17.449 17.8202 15.5204 17.9102 13.2245C18.0002 11.8469 18.0002 10.3776 18.0002 8.90816C18.0002 7.43878 18.0002 5.87755 17.9102 4.40816Z"
-                    fill="#7B64B1"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_450_1145">
-                    <rect width="18" height="18" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M11.1961 19.717C11.6745 20.1887 17.8946 20.0943 18.7559 19.6226C19.8085 18.9623 19.9999 16.3208 19.9999 9.90566C19.9999 1.79245 20.0956 0.0943396 14.7367 0C11.2918 0 10.5262 0.188679 11.1004 1.13208C11.2918 1.50943 11.8659 1.50943 14.5453 1.60377C18.6602 1.69811 18.3731 3.01887 18.3731 9.81132C18.3731 17.0755 18.6602 18.3019 14.7367 18.3019C11.6745 18.3019 11.0047 18.3962 11.0047 19.1509C10.909 19.3396 11.1004 19.5283 11.1961 19.717Z"
+                  fill="#7B64B1"
+                />
+                <path
+                  d="M9.09091 11.4151C8.32536 11.6981 8.61244 12.4529 8.80383 13.2076C7.27273 12.4529 3.82775 10.8491 2.29665 10.0944C3.73206 9.24531 7.17703 7.5472 8.70813 6.79248C8.51675 7.45286 8.42105 8.0189 8.70813 8.30191C8.80383 8.49059 8.99522 8.58493 9.2823 8.58493C9.66507 8.58493 9.95215 8.30191 10.2392 7.73588C10.5263 7.16984 10.9091 5.75475 10.4306 5.09437C9.76077 4.24531 9.37799 4.43399 4.689 6.79248L3.54067 7.45286C1.05263 8.67927 0 9.15097 0 10C0 10.8491 1.05263 11.3208 3.54067 12.5472L4.689 13.2076C7.84689 14.8113 8.99522 15.283 9.56938 15.283C9.85646 15.283 9.95215 15.1887 10.1435 15C10.8134 14.434 10.4306 12.7359 10.0478 11.9812C9.76077 11.2264 9.1866 11.3208 9.09091 11.4151Z"
+                  fill="#5280E4"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.1626 6.2264C13.4928 5.7547 13.11 5.7547 12.6315 6.41508C12.0574 7.26414 11.3875 7.45282 10.1435 7.35848C8.51668 7.1698 8.03821 8.30187 9.37793 8.96225C11.6746 10.1887 16.0765 7.54715 14.1626 6.2264Z"
+                  fill="#5280E4"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.1196 10.849C14.8325 10.3773 14.6411 10.3773 14.067 10.7547C13.3971 11.2264 12.9186 11.2264 12.1531 10.9434C11.1962 10.4717 10.4306 11.2264 11.1005 11.9811C12.1531 13.1132 15.8851 12.1698 15.1196 10.849Z"
+                  fill="#7B64B1"
+                />
               </svg>
             </span>
-            <span class="nav-expand">Cerrar sesión</span>
+            Cerrar sesión
           </a>
         </div>
       </aside>
@@ -427,297 +431,71 @@
 
         <!-- Main Section -->
         <div class="mt-6 rounded-xl bg-white">
-          <div
-            class="flex justify-between items-center p-4 bg-pale-yellow rounded-t-xl"
-          >
-            <h3 class="text-xl font-bold text-dark-purple">
-              Calendario mensual
-            </h3>
-            <div class="relative inline-block space-x-2">
-              <!-- Botón -->
+          <div class="relative p-4 bg-pale-yellow rounded-t-xl flex items-center">
+            <!-- Botón a la izquierda -->
+            <div class="absolute left-4">
               <a
-                href="#"
+                href="planeacion.html"
                 id="openMenuBtn"
                 class="text-dark-purple font-bold text-sm inline-flex items-center"
               >
                 <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
+                  width="10"
+                  height="16"
+                  viewBox="0 0 10 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="inline"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M2.97177 0.0857143C0.254787 0.342857 6.97357e-05 0.942857 6.97357e-05 9C6.97357e-05 18.2571 -0.254647 17.9143 6.96233 17.9143C11.3774 17.9143 11.9718 17.9143 12.1416 17.5714C12.7359 16.6286 12.1416 16.5429 7.30196 16.5429C2.80196 16.5429 2.80196 16.5429 2.20762 16.0286L1.61328 15.4286L1.52837 9.25714C1.44347 0.685714 0.679316 1.45714 9.16988 1.45714H15.5378L16.0472 2.05714C16.5567 2.65714 16.5567 2.74286 16.5567 8.91428V15.1714L15.9623 15.7714C15.6227 16.1143 15.1982 16.3714 14.9435 16.3714C14.3491 16.3714 14.0095 16.8857 14.1793 17.4C14.5189 18.5143 17.151 17.4857 17.7454 16.0286C18.1699 14.9143 18.2548 2.82857 17.7454 1.8C17.151 0.257143 16.5567 0.0857143 13.8397 0C7.04724 0 4.24535 0 2.97177 0.0857143Z"
+                    d="M0.533846 9.27797L6.87197 15.4807C7.21523 15.8076 7.67618 15.989 8.15509 15.9858C8.63401 15.9826 9.09238 15.795 9.43103 15.4636C9.76968 15.1321 9.96138 14.6836 9.96466 14.2149C9.96794 13.7462 9.78253 13.2951 9.44855 12.9592L4.39872 8.01758L9.44855 3.07561C9.62156 2.91087 9.75939 2.71414 9.85405 2.49684C9.94871 2.27954 9.99831 2.04599 9.99996 1.80977C10.0016 1.57355 9.95529 1.33937 9.86368 1.12082C9.77207 0.902267 9.63701 0.703707 9.46632 0.536672C9.29564 0.369636 9.09275 0.237452 8.86943 0.1478C8.64611 0.0581492 8.40681 0.0128163 8.16543 0.0144347C7.92406 0.0160521 7.68542 0.0645883 7.46337 0.157224C7.24133 0.249861 7.0403 0.384751 6.87197 0.554059L0.533847 6.7568C0.364606 6.9223 0.230347 7.11881 0.138748 7.33511C0.0471475 7.55141 -2.36581e-07 7.78325 -2.5705e-07 8.01739C-2.77519e-07 8.25152 0.0471475 8.48337 0.138748 8.69966C0.230347 8.91596 0.364606 9.11247 0.533846 9.27797Z"
                     fill="#7B64B1"
                   />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M13.5 8.3143C13.2453 8.22858 11.6321 8.14287 9.84909 8.14287C9.84909 6.42859 9.76418 4.88573 9.67928 4.54287C9.42456 4.02859 8.4906 3.94287 8.32079 4.45716C8.15098 4.7143 8.15098 6.34287 8.15098 8.14287C6.19815 8.14287 4.50003 8.22858 4.41513 8.40001C3.9906 8.82858 4.0755 9.34287 4.58494 9.60001C4.83966 9.68573 6.45286 9.77144 8.23588 9.77144C8.23588 11.7429 8.32079 13.4572 8.4906 13.5429C8.91513 13.9714 9.42456 13.8857 9.67928 13.3714C9.76418 13.1143 9.84909 11.5714 9.84909 9.77144C11.5472 9.77144 13.0755 9.68573 13.4151 9.60001C13.9246 9.42858 14.0095 8.48573 13.5 8.3143Z"
-                    fill="#5280E4"
-                  />
                 </svg>
-                <span class="ml-2">Agregar actividad</span>
+                <span class="ml-2">Regresar</span>
               </a>
-
-              <!-- Menú -->
-              <div
-                id="activityMenu"
-                class="absolute top-full right-0 mt-2 w-96 bg-white shadow-lg rounded-lg border border-gray-200 px-12 py-10 z-50 hidden"
-              >
-                <h2 class="text-md font-medium mb-4 mx-auto text-center">
-                  Agregar actividad
-                </h2>
-
-                <!-- Fecha -->
-                <div class="mb-3">
-                  <label
-                    for="activityDate"
-                    class="block text-sm font-medium text-blue"
-                    >Fecha</label
-                  >
-                  <input
-                    type="date"
-                    id="activityDate"
-                    class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-
-                <!-- Título -->
-                <div class="mb-3">
-                  <label
-                    for="activityTitle"
-                    class="block text-sm font-medium text-blue"
-                    >Título</label
-                  >
-                  <input
-                    type="text"
-                    id="activityTitle"
-                    placeholder="Ej. Tarea de matemáticas"
-                    class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  />
-                </div>
-
-                <!-- Tipo -->
-                <div class="mb-4">
-                  <label
-                    for="activityType"
-                    class="block text-sm font-medium text-blue"
-                    >Tipo</label
-                  >
-                  <select
-                    id="activityType"
-                    class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  >
-                    <option value="examen">Examen</option>
-                    <option value="tarea">Tarea</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-
-                <!-- Botones -->
-                <div class="flex justify-center space-x-2">
-                  <button
-                    id="cancelBtn"
-                    class="px-4 py-2 rounded-full bg-white text-blue hover:bg-gray-300 border-blue-200 border"
-                  >
-                    Cancelar
-                  </button>
-                  <button
-                    id="addBtn"
-                    class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
-                  >
-                    Agregar
-                  </button>
-                </div>
-              </div>
             </div>
+          
+            <!-- Texto centrado -->
+            <h3 class="mx-auto text-xl font-bold text-dark-purple">
+              Examenes
+            </h3>
           </div>
 
-          <div class="calendar min-w-screen bg-white mx-10">
-            <div class="calendar-header flex items-center">
-              <button
-                id="prev-month"
-                class="font-bold text-dark-purple text-4xl mx-2"
+          <div class="min-w-screen bg-white">
+            <div class="bg-white rounded-xl shadow p-6">
+              <table
+                class="min-w-full divide-y divide-gray-200 text-sm text-gray-700"
+                id="materialTabla"
               >
-                ‹
-              </button>
-              <button
-                id="next-month"
-                class="font-bold text-dark-purple text-4xl mx-2"
-              >
-                ›
-              </button>
-              <div id="month-year" class="mx-2 font-semibold text-lg"></div>
-            </div>
-            <div class="calendar-body">
-              <div class="calendar-weekdays text-pale-purple text-sm">
-                <div>Domingo</div>
-                <div>Lunes</div>
-                <div>Martes</div>
-                <div>Miércoles</div>
-                <div>Jueves</div>
-                <div>Viernes</div>
-                <div>Sábado</div>
-              </div>
-              <div class="calendar-dates">
-                <!-- Dates will be populated here -->
-              </div>
+                <thead
+                  class="bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase"
+                >
+                  <tr>
+                    <th class="px-4 py-3">Portada</th>
+                    <th class="px-4 py-3">Nombre</th>
+                    <th class="px-4 py-3">Abrir</th>
+                    <th class="px-4 py-3">Descargar</th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-gray-200"
+                  id="materialTableBody"
+                ></tbody>
+              </table>
             </div>
           </div>
-
-          <div
-            id="taskPopover"
-            class="absolute w-96 bg-white shadow-lg rounded-lg border border-pale-purple px-12 py-8 z-50 hidden"
-          >
-            <!-- Encabezado -->
-            <div
-              class="flex justify-end items-center space-x-2 text-blue text-sm"
-            >
-              <button id="editTaskBtn" class="hover:text-indigo-600 mx-1">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.56386 15.93C2.66162 15.3 1.93982 14.22 1.93982 13.05C1.75938 10.53 1.75938 8.01 1.93982 5.49C2.03005 3.6 3.74431 1.98 5.63902 1.89C6.90217 1.89 8.16531 1.8 9.42845 1.8C10.872 1.8 12.4059 1.8 13.8494 1.89C14.8419 1.89 15.7442 2.52 16.1953 3.33C16.3757 3.6 16.6464 3.78 17.0073 3.78C17.7291 3.78 18.1802 2.97 17.8193 2.43C17.0073 1.08 15.5637 0.18 13.9397 0.09C12.3156 0 10.872 0 9.33822 0C7.80441 0 6.27059 0 4.73678 0.09C2.30072 0.18 0.225561 2.07 0.135337 4.5C-0.0451122 7.65 -0.0451122 10.8 0.135337 13.95C0.225561 15.57 1.1278 16.92 2.39095 17.64C3.11274 18.09 4.01499 17.55 4.01499 16.74C4.01499 16.47 3.83454 16.11 3.56386 15.93Z"
-                    fill="#7B64B1"
-                  />
-                  <path
-                    d="M18.0002 9.0901C18.0002 8.4601 17.7296 7.8301 17.2784 7.3801L15.2033 5.4001C14.301 4.5001 12.7672 4.5001 11.7748 5.4001L5.54927 11.5201C4.10568 12.9601 4.01546 15.3901 5.45905 16.8301C6.09062 17.5501 6.99286 17.9101 7.89511 18.0001C7.89511 18.0001 7.89511 18.0001 7.98533 18.0001C8.07555 18.0001 8.07555 18.0001 8.16578 18.0001H8.256C8.34623 18.0001 8.43645 18.0001 8.43645 18.0001C10.1507 18.0001 14.1206 18.0001 15.9251 17.9101C16.4664 17.9101 16.8273 17.4601 16.8273 16.9201C16.8273 16.3801 16.3762 16.0201 15.8349 16.0201C14.7522 16.0201 13.1281 16.1101 11.6845 16.1101L17.098 10.8901C17.7296 10.4401 18.0002 9.8101 18.0002 9.0901ZM6.90264 12.7801L10.4214 9.3601L13.2183 12.1501L9.69959 15.5701C9.3387 15.9301 8.79735 16.1101 8.256 16.1101C7.71466 16.1101 7.26354 15.9301 6.90264 15.4801C6.18084 14.7601 6.18084 13.5901 6.90264 12.7801ZM15.9251 9.5401L14.4815 10.8901L11.7748 8.1001L13.1281 6.7501C13.3086 6.5701 13.6695 6.5701 13.9401 6.7501L16.0153 8.7301C16.1055 8.8201 16.1957 9.0001 16.1957 9.1801C16.1055 9.2701 16.1055 9.4501 15.9251 9.5401Z"
-                    fill="#7B64B1"
-                  />
-                </svg>
-              </button>
-              <button id="deleteTaskBtn" class="hover:text-red-600 mx-1">
-                <svg
-                  width="17"
-                  height="18"
-                  viewBox="0 0 17 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.2842 2.92611H15.5684H12.7053L11.6316 1.33005C11.0947 0.44335 10.1105 0 9.12632 0H8.05263C7.06842 0 6.08421 0.44335 5.54737 1.24138L4.38421 2.92611H1.43158H0.715789C0.357895 2.92611 0 3.28079 0 3.63547C0 4.07882 0.357895 4.4335 0.715789 4.4335H1.52105L2.14737 14.4532C2.23684 16.4926 3.93684 18 5.99474 18H10.8263C12.8842 18 14.4947 16.4926 14.6737 14.4532L15.4789 4.4335H16.2842C16.7316 4.4335 17 4.07882 17 3.63547C17 3.28079 16.7316 2.92611 16.2842 2.92611ZM6.97895 13.3005C6.97895 13.6552 6.71053 14.0099 6.26316 14.0099C5.81579 14.0099 5.63684 13.6552 5.63684 13.3005V8.42365C5.63684 8.06897 5.90526 7.71429 6.35263 7.71429C6.8 7.71429 7.06842 7.9803 7.06842 8.42365V13.3005H6.97895ZM11.3632 13.3005C11.3632 13.6552 11.0947 14.0099 10.6474 14.0099C10.2 14.0099 9.93158 13.7438 9.93158 13.3005V8.42365C9.93158 8.06897 10.2 7.71429 10.6474 7.71429C11.0947 7.71429 11.3632 7.9803 11.3632 8.42365V13.3005ZM6.97895 2.21675C7.24737 1.95074 7.60526 1.7734 8.05263 1.7734H9.12632C9.57368 1.7734 9.93158 1.95074 10.1105 2.30542L10.5579 2.92611H6.53158L6.97895 2.21675Z"
-                    fill="#7B64B1"
-                  />
-                </svg>
-              </button>
-              <button id="closeTaskPopoverBtn" class="hover:text-gray-500 mx-1">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.9099 4.5C17.8199 2.07 15.8399 0.18 13.4999 0.09C11.9699 0 10.5299 0 9.08992 0C7.55992 0 6.11992 0 4.58992 0.09C2.24992 0.18 0.269922 1.98 0.179922 4.41C-7.81193e-05 7.47 -7.81193e-05 10.53 0.179922 13.59C0.359922 15.93 2.24992 17.73 4.49992 17.91C6.02992 18 7.55992 18 9.08992 18C10.6199 18 12.0599 18 13.5899 17.91C15.9299 17.82 17.8199 15.84 17.9099 13.5C17.9999 10.44 17.9999 7.47 17.9099 4.5ZM16.1099 13.41C16.0199 14.85 14.8499 16.02 13.4999 16.11C12.0599 16.2 10.5299 16.2 9.08992 16.2C7.55992 16.2 6.11992 16.2 4.58992 16.11C3.14992 16.02 2.06992 14.94 1.97992 13.5C1.79992 10.53 1.79992 7.47 1.97992 4.5C2.06992 3.06 3.23992 1.98 4.67992 1.89C6.11992 1.8 7.64992 1.8 9.08992 1.8C10.5299 1.8 11.9699 1.8 13.4099 1.89C14.8499 1.98 16.0199 3.15 16.1099 4.59C16.1999 7.56 16.1999 10.44 16.1099 13.41Z"
-                    fill="#7B64B1"
-                  />
-                  <path
-                    d="M11.9698 10.71L10.2598 9.00001L11.9698 7.29001C12.3298 6.93001 12.3298 6.39001 11.9698 6.03001C11.6098 5.67001 11.0698 5.67001 10.7098 6.03001L8.99977 7.74001L7.28977 6.03001C6.92977 5.67001 6.38977 5.67001 6.02977 6.03001C5.66977 6.39001 5.66977 6.93001 6.02977 7.29001L7.73977 9.00001L6.02977 10.71C5.66977 11.07 5.66977 11.61 6.02977 11.97C6.38977 12.33 6.92977 12.33 7.28977 11.97L8.99977 10.26L10.7098 11.97C11.0698 12.33 11.6098 12.33 11.9698 11.97C12.3298 11.61 12.3298 11.07 11.9698 10.71Z"
-                    fill="#7B64B1"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="flex justify-between items-center mb-2">
-              <div
-                class="text-md font-medium text-center w-full"
-                id="popoverTitle"
-              >
-                Actividad
-              </div>
-            </div>
-
-            <!-- Contenido -->
-            <div id="taskViewMode">
-              <div class="mb-2">
-                <label class="block text-sm text-blue font-medium"
-                  >Fecha:</label
-                >
-                <span id="taskDate" class="text-gray-700 text-sm"
-                  >2025-08-29</span
-                >
-              </div>
-
-              <div class="mb-2">
-                <label class="block text-sm text-blue font-medium"
-                  >Título:</label
-                >
-                <span id="taskTitle" class="text-gray-700 text-sm"
-                  >Examen: Prueba español</span
-                >
-              </div>
-
-              <div>
-                <label class="block text-sm text-blue font-medium">Tipo:</label>
-                <span id="taskType" class="text-gray-700 text-sm">Examen</span>
-              </div>
-            </div>
-
-            <!-- Edición -->
-            <div id="taskEditMode" class="hidden">
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue">Fecha</label>
-                <input
-                  type="date"
-                  id="editTaskDate"
-                  class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-
-              <div class="mb-3">
-                <label class="block text-sm font-medium text-blue"
-                  >Título</label
-                >
-                <input
-                  type="text"
-                  id="editTaskTitle"
-                  class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </div>
-
-              <div class="mb-4">
-                <label class="block text-sm font-medium text-blue">Tipo</label>
-                <select
-                  id="editTaskType"
-                  class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                >
-                  <option value="examen">Examen</option>
-                  <option value="tarea">Tarea</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-
-              <div class="flex justify-center space-x-2">
-                <button
-                  id="cancelEditBtn"
-                  class="px-4 py-2 rounded-full bg-white text-blue hover:bg-gray-300 border-blue-200 border"
-                >
-                  Cancelar
-                </button>
-                <button
-                  id="saveEditBtn"
-                  class="px-4 py-2 rounded-full bg-blue text-white hover:bg-indigo-400"
-                >
-                  Guardar
-                </button>
-              </div>
+          <!-- Modal -->
+          <div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+            <div class="bg-white w-11/12 md:w-2/3 lg:w-1/2 rounded-2xl shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
+              <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">&times;</button>
+              <h2 class="text-xl font-bold mb-4">Título del Modal</h2>
+              <p>Contenido del modal aquí...</p>
             </div>
           </div>
-
-          <script src="js/script.js"></script>
+          <script src="js/scriptMaterial.js"></script>
           <script src="js/menu.js"></script>
         </div>
+        
       </main>
     </div>
   </body>
